@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://inviklenwnip"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gry5r"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_64p1j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3poca"]
+albedo_color = Color(0.298039, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0vnny"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cf8wp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8epbe"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_gry5r")
+SPEED = 5.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.832265, 0, 0, 0, 1, 0, 0, 0, 0.832265, 0, 1.0337, 0)
+mesh = SubResource("CapsuleMesh_64p1j")
+surface_material_override/0 = SubResource("StandardMaterial3D_3poca")
+
+[node name="Glass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707684, 0, 0, 0, 0.230807, 0, 0, 0, 0.880622, 0, 1.48182, 0.244074)
+mesh = SubResource("BoxMesh_0vnny")
+surface_material_override/0 = SubResource("StandardMaterial3D_cf8wp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.865717, 0, 0, 0, 1.01961, 0, 0, 0, 0.865717, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_8epbe")

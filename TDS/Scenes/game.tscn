@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://derdtww4x1bgo"]
+
+[ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8po2a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dux8q"]
+
+[sub_resource type="Sky" id="Sky_mnta6"]
+sky_material = SubResource("ProceduralSkyMaterial_dux8q")
+
+[sub_resource type="Environment" id="Environment_v8n88"]
+background_mode = 2
+sky = SubResource("Sky_mnta6")
+ambient_light_source = 3
+tonemap_mode = 3
+
+[node name="Game" type="Node3D"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape3D_6fuqt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_8po2a")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, -2.15582, 6.79016, 0)
+current = true
+fov = 129.7
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v8n88")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5.12617, 0)
+shadow_enabled = true
