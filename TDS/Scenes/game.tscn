@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=10 format=3 uid="uid://derdtww4x1bgo"]
 
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
@@ -17,7 +18,13 @@ sky = SubResource("Sky_mnta6")
 ambient_light_source = 3
 tonemap_mode = 3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvo6b"]
+albedo_color = Color(1, 0, 0.0156863, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tuwiv"]
+
 [node name="Game" type="Node3D"]
+script = ExtResource("1_u6w4i")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 
@@ -30,14 +37,18 @@ mesh = SubResource("PlaneMesh_8po2a")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, -2.15582, 6.79016, 0)
-current = true
-fov = 129.7
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v8n88")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5.12617, 0)
 shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, -2.15582, 6.79016, 0)
+current = true
+fov = 129.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_dvo6b")
+mesh = SubResource("BoxMesh_tuwiv")
