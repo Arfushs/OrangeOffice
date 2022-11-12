@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://lrf1c5y4x6p3"
+path="res://.godot/imported/button_02_02.png-209a95d40269d4d8092c3c5ec380f0c4.image"
+
+[deps]
+
+source_file="res://Assets/UI Assets/SpaceDepotUI_png/button_02_02.png"
+dest_files=["res://.godot/imported/button_02_02.png-209a95d40269d4d8092c3c5ec380f0c4.image"]
+
+[params]
+
