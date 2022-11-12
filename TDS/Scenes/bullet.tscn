@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2dc2lmft2ss"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_lqmue"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rbged"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfple"]
+albedo_color = Color(0.890196, 0.666667, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cjwbu"]
+height = 2.00011
+
+[node name="Bullet" type="Area3D"]
+transform = Transform3D(0.15, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("1_lqmue")
+Speed = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_rbged")
+surface_material_override/0 = SubResource("StandardMaterial3D_kfple")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.789161)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_cjwbu")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

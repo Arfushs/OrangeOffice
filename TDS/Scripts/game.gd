@@ -23,6 +23,7 @@ func _physics_process(delta):
 	
 	if raycast_result.position != null:
 		mesh.position = raycast_result.position
-		var pos :Vector3 = raycast_result.position
+		var pos : Vector3 = raycast_result.position
 		pos.y = self.rotation.y
-		player.look_at(pos,Vector3.UP) 
+		player.look_at(pos,Vector3.UP)
+		
