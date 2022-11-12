@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2dc2lmft2ss"]
 
 [ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_lqmue"]
-[ext_resource type="PackedScene" uid="uid://bxe58r8l1alm5" path="res://Assets/Mesh/Bullet.gltf" id="2_4nnga"]
+[ext_resource type="PackedScene" uid="uid://bdpuwhr6l8746" path="res://Scenes/bulletCan.tscn" id="2_0awkk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cjwbu"]
 height = 2.00011
@@ -18,7 +18,13 @@ shape = SubResource("CapsuleShape3D_cjwbu")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Bullet" parent="." instance=ExtResource("2_4nnga")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Bullet2" parent="." instance=ExtResource("2_0awkk")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(6.66667, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+light_color = Color(0.988235, 0.282353, 0, 1)
+light_energy = 6.831
+light_cull_mask = 4294967293
+omni_range = 3.48512
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

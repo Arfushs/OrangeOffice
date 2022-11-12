@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ucfl8sibqtw" path="res://Assets/Textures/Bullet.png" id="1_uut3a"]
 
 [resource]
+render_priority = 1
 transparency = 1
 albedo_texture = ExtResource("1_uut3a")
 emission_enabled = true

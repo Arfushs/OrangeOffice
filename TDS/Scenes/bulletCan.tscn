@@ -2,13 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxe58r8l1alm5" path="res://Assets/Mesh/Bullet.gltf" id="1_kynja"]
 
-[node name="Bullets" type="Node3D"]
+[node name="Bullet" instance=ExtResource("1_kynja")]
 
-[node name="Bullet" parent="." instance=ExtResource("1_kynja")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Bullet"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-light_color = Color(1, 0.501961, 0, 1)
-light_energy = 2.0
-omni_range = 0.663935
+[node name="Bullet001" parent="." index="0"]
+layers = 2
