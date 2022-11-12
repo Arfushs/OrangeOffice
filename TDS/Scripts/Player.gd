@@ -2,11 +2,13 @@ extends CharacterBody3D
 
 
 @export var SPEED = 10.0
+@export var Bullet: PackedScene
 
 
 
 func _physics_process(delta):
 	movement_function()
+	shoot()
 
 func movement_function():
 		
@@ -22,3 +24,29 @@ func movement_function():
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func shoot():
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		
+		var new_bullet = Bullet.instantiate()
+		new_bullet.global_transform = $Marker3D.global_transform
+		new_bullet.scale.x = 0.1
+		new_bullet.scale.y = 0.2
+		new_bullet.scale.z = 0.2
+		
+		var scene_root = get_tree().get_root().get_children()[0]
+		
+		scene_root.add_child(new_bullet)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
