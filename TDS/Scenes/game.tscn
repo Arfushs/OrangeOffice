@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=11 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
@@ -6,6 +6,9 @@
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8po2a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3m3x"]
+albedo_color = Color(0.00784314, 0.145098, 0.219608, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dux8q"]
 
@@ -34,6 +37,7 @@ shape = SubResource("WorldBoundaryShape3D_6fuqt")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
 mesh = SubResource("PlaneMesh_8po2a")
+surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 

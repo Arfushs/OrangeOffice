@@ -38,5 +38,8 @@ mesh = SubResource("BoxMesh_0vnny")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_cf8wp")
 
+[node name="Gun" type="MeshInstance3D" parent="Rotation"]
+transform = Transform3D(-9.30091, 0, -3.67329, 0, 10, 0, 3.67329, 0, -9.30091, 0.585842, 1.06156, -0.507213)
+
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12916, -1.7584)

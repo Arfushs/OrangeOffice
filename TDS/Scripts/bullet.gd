@@ -11,7 +11,7 @@ func _process(delta):
 	var forward_direction = global_transform.basis.z.normalized()
 	global_translate(forward_direction * Speed * delta *-1)
 	
-	
+	rotation.z += 15
 	
 func _on_timer_timeout():
 	
