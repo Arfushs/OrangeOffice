@@ -21,7 +21,7 @@ tonemap_mode = 3
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvo6b"]
 albedo_color = Color(1, 0, 0.0156863, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tuwiv"]
+[sub_resource type="PrismMesh" id="PrismMesh_wy3mv"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_u6w4i")
@@ -45,10 +45,14 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5.12617
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, -2.15582, 6.79016, 0)
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 16.38, 3.747)
 current = true
-fov = 129.7
+fov = 70.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Debug Pointer" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Debug Pointer"]
+transform = Transform3D(0.246007, 0, 0, 0, -0.246007, 6.45197e-09, 0, -2.15066e-08, -0.073802, 0, 1.40312, 0)
 material_override = SubResource("StandardMaterial3D_dvo6b")
-mesh = SubResource("BoxMesh_tuwiv")
+mesh = SubResource("PrismMesh_wy3mv")
+skeleton = NodePath("../..")
