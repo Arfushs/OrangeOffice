@@ -31,7 +31,7 @@ func shoot():
 	if Input.is_action_just_pressed("ui_accept"):
 		
 		var new_bullet = Bullet.instantiate()
-		new_bullet.global_transform = $Marker3D.global_transform
+		new_bullet.global_transform = $Rotation/Marker3D.global_transform
 		new_bullet.scale.x = 0.1
 		new_bullet.scale.y = 0.2
 		new_bullet.scale.z = 0.2

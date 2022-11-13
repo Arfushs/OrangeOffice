@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var player : CharacterBody3D = $CharacterBody3D 
-@onready var camera : Camera3D = $Camera3D
+@onready var camera : Camera3D = $CharacterBody3D/Camera3D
 @onready var mesh : Node3D = $"Debug Pointer"
 
 var ray_origin = Vector3()
@@ -25,5 +25,6 @@ func _physics_process(delta):
 		mesh.position = raycast_result.position
 		var pos : Vector3 = raycast_result.position
 		pos.y = self.rotation.y
-		player.look_at(pos,Vector3.UP)
+		##player.look_at(pos,Vector3.UP)
+		$CharacterBody3D/Rotation.look_at(pos,Vector3.UP)
 		

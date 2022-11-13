@@ -41,6 +41,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 15.2838, 0.530853)
+current = true
+fov = 70.0
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v8n88")
 
@@ -48,12 +53,8 @@ environment = SubResource("Environment_v8n88")
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5.12617, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 16.38, 3.747)
-current = true
-fov = 70.0
-
 [node name="Debug Pointer" type="Node3D" parent="."]
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Debug Pointer"]
 transform = Transform3D(0.246007, 0, 0, 0, -0.246007, 6.45197e-09, 0, -2.15066e-08, -0.073802, 0, 1.40312, 0)
