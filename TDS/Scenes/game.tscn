@@ -1,10 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=12 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
-[ext_resource type="Texture2D" uid="uid://cwln1judlgvxw" path="res://224678.png" id="3_2x41r"]
-[ext_resource type="Texture2D" uid="uid://ctgn4jmnu2kph" path="res://123628.png" id="4_wloo1"]
-[ext_resource type="FontFile" uid="uid://cxirj0jt5bjx2" path="res://Boleh.ttf" id="5_qkagh"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
 
@@ -12,6 +9,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3m3x"]
 albedo_color = Color(0.00784314, 0.145098, 0.219608, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r5ya3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dux8q"]
 
@@ -42,8 +41,11 @@ transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
 mesh = SubResource("PlaneMesh_8po2a")
 surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(3.48709, 0, 0, 0, 1, 0, 0, 0, 3.48709, 0, 0, 0)
+mesh = SubResource("BoxMesh_r5ya3")
+
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
-SPEED = 15.0
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 15.2838, 0.530853)
@@ -65,35 +67,3 @@ transform = Transform3D(0.246007, 0, 0, 0, -0.246007, 6.45197e-09, 0, -2.15066e-
 material_override = SubResource("StandardMaterial3D_dvo6b")
 mesh = SubResource("PrismMesh_wy3mv")
 skeleton = NodePath("../..")
-
-[node name="PlayerUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1156.0
-offset_bottom = 648.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
-
-[node name="Ammo" type="Sprite2D" parent="PlayerUI"]
-visible = false
-position = Vector2(1076, 577)
-scale = Vector2(0.224609, 0.203125)
-texture = ExtResource("3_2x41r")
-
-[node name="Ammo2" type="Sprite2D" parent="PlayerUI"]
-position = Vector2(1076, 574)
-scale = Vector2(0.152832, 0.152832)
-texture = ExtResource("4_wloo1")
-
-[node name="Label" type="Label" parent="PlayerUI"]
-offset_left = 986.0
-offset_top = 552.0
-offset_right = 1079.0
-offset_bottom = 609.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_qkagh")
-theme_override_font_sizes/font_size = 39
-text = "10/10"
-
-[connection signal="ammo_spent" from="CharacterBody3D" to="." method="_on_character_body_3d_ammo_spent"]
