@@ -78,21 +78,33 @@ offset_bottom = 647.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
 
-[node name="TextureRect" type="TextureRect" parent="PlayerUI"]
-layout_mode = 0
-offset_left = 1025.0
-offset_top = 532.0
-offset_right = 1537.0
-offset_bottom = 1044.0
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -121.0
+offset_right = 400.0
+offset_bottom = 391.0
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(0.239994, 0.239994)
 texture = ExtResource("3_kn7mp")
 
-[node name="Label" type="Label" parent="PlayerUI"]
-layout_mode = 0
-offset_left = 983.0
-offset_top = 564.0
-offset_right = 1093.0
-offset_bottom = 622.0
+[node name="Label" type="Label" parent="PlayerUI/CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -84.0
+offset_right = -53.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15

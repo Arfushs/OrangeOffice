@@ -3,7 +3,7 @@ extends Node3D
 @onready var player : CharacterBody3D = $CharacterBody3D 
 @onready var camera : Camera3D = $CharacterBody3D/Camera3D
 @onready var mesh : Node3D = $"Debug Pointer"
-@onready var Text : Label = $PlayerUI/Label
+@onready var Text : Label = $PlayerUI/CanvasLayer/Label
 
 var ray_origin = Vector3()
 var ray_target = Vector3()
