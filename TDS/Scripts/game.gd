@@ -11,8 +11,6 @@ var ray_target = Vector3()
 
 
 
-
-
 func _physics_process(delta):
 	
 	

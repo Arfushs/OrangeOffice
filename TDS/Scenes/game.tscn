@@ -78,9 +78,13 @@ offset_bottom = 647.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerUI"]
-position = Vector2(1089, 591)
-scale = Vector2(0.216797, 0.216797)
+[node name="TextureRect" type="TextureRect" parent="PlayerUI"]
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 532.0
+offset_right = 1537.0
+offset_bottom = 1044.0
+scale = Vector2(0.239994, 0.239994)
 texture = ExtResource("3_kn7mp")
 
 [node name="Label" type="Label" parent="PlayerUI"]
