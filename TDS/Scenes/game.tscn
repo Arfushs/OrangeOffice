@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=14 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
+[ext_resource type="Texture2D" uid="uid://ctgn4jmnu2kph" path="res://123628.png" id="3_kn7mp"]
+[ext_resource type="FontFile" uid="uid://cxirj0jt5bjx2" path="res://Boleh.ttf" id="4_ee1k1"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
 
@@ -67,3 +69,31 @@ transform = Transform3D(0.246007, 0, 0, 0, -0.246007, 6.45197e-09, 0, -2.15066e-
 material_override = SubResource("StandardMaterial3D_dvo6b")
 mesh = SubResource("PrismMesh_wy3mv")
 skeleton = NodePath("../..")
+
+[node name="PlayerUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 647.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerUI"]
+position = Vector2(1089, 591)
+scale = Vector2(0.216797, 0.216797)
+texture = ExtResource("3_kn7mp")
+
+[node name="Label" type="Label" parent="PlayerUI"]
+layout_mode = 0
+offset_left = 983.0
+offset_top = 564.0
+offset_right = 1093.0
+offset_bottom = 622.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_ee1k1")
+theme_override_font_sizes/font_size = 45
+text = "10/10"
+
+[connection signal="ammo_spent" from="CharacterBody3D" to="." method="_on_character_body_3d_ammo_spent"]
