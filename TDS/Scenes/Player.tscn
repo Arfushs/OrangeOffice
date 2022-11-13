@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://inviklenwnip"]
+[gd_scene load_steps=10 format=3 uid="uid://inviklenwnip"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gry5r"]
 [ext_resource type="PackedScene" uid="uid://d2dc2lmft2ss" path="res://Scenes/bullet.tscn" id="2_m8j2t"]
+[ext_resource type="AudioStream" uid="uid://do7m174ff4ets" path="res://Gun Reload sound effect.wav" id="3_jcp30"]
+[ext_resource type="AudioStream" uid="uid://c1r2im1piq4s3" path="res://Gunshot Sound Effect Single Shot.wav" id="4_yj0gr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8epbe"]
 
@@ -43,3 +45,10 @@ transform = Transform3D(-9.30091, 0, -3.67329, 0, 10, 0, 3.67329, 0, -9.30091, 0
 
 [node name="Marker3D" type="Marker3D" parent="Rotation"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12916, -1.7584)
+
+[node name="ReloadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jcp30")
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yj0gr")
+max_polyphony = 11

@@ -3,12 +3,17 @@ extends CharacterBody3D
 
 @export var SPEED = 10.0
 @export var Bullet: PackedScene
+@export var max_ammo = 10
+var ammo = max_ammo
 
-
+signal ammo_spent(ammo,max_ammo)
 
 func _physics_process(delta):
 	movement_function()
 	shoot()
+	
+	if Input.is_action_just_pressed("reload"):
+		reload()
 
 func movement_function():
 		
@@ -28,7 +33,9 @@ func movement_function():
 
 func shoot():
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") && ammo != 0:
+		
+		$shoot.play()
 		
 		var new_bullet = Bullet.instantiate()
 		new_bullet.global_transform = $Rotation/Marker3D.global_transform
@@ -37,10 +44,15 @@ func shoot():
 		new_bullet.scale.z = 0.2
 		
 		var scene_root = get_tree().get_root().get_children()[0]
-		
+		ammo -=1
 		scene_root.add_child(new_bullet)
+		emit_signal("ammo_spent",ammo,max_ammo)
 		
 		
+func reload():
+	$ReloadSound.play()
+	ammo = max_ammo
+	emit_signal("ammo_spent",ammo,max_ammo)
 		
 		
 		

@@ -3,11 +3,18 @@ extends Node3D
 @onready var player : CharacterBody3D = $CharacterBody3D 
 @onready var camera : Camera3D = $CharacterBody3D/Camera3D
 @onready var mesh : Node3D = $"Debug Pointer"
+@onready var Text : Label = $PlayerUI/Label
 
 var ray_origin = Vector3()
 var ray_target = Vector3()
 
+
+
+
+
+
 func _physics_process(delta):
+	
 	
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_length = 100
@@ -28,3 +35,9 @@ func _physics_process(delta):
 		##player.look_at(pos,Vector3.UP)
 		$CharacterBody3D/Rotation.look_at(pos,Vector3.UP)
 		
+
+
+
+func _on_character_body_3d_ammo_spent(ammo, max_ammo):
+	
+	Text.text = str(ammo) + "/" + str(max_ammo)
