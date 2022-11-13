@@ -15,6 +15,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("reload"):
 		reload()
 
+func _process(delta):
+	if ammo ==0:
+		$Reload/CanvasLayer/Label.visible = true
+
+
 func movement_function():
 		
 	# Get the input direction and handle the movement/deceleration.
@@ -50,6 +55,7 @@ func shoot():
 		
 		
 func reload():
+	$Reload/CanvasLayer/Label.visible = false
 	$ReloadSound.play()
 	ammo = max_ammo
 	emit_signal("ammo_spent",ammo,max_ammo)

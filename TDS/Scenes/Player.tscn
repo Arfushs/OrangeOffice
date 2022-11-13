@@ -52,3 +52,34 @@ stream = ExtResource("3_jcp30")
 [node name="shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_yj0gr")
 max_polyphony = 11
+
+[node name="Reload" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1145.0
+offset_bottom = 651.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Reload"]
+
+[node name="Label" type="RichTextLabel" parent="Reload/CanvasLayer"]
+visible = false
+offset_left = 16.0
+offset_top = 23.0
+offset_right = 644.0
+offset_bottom = 86.0
+text = "Press R to Reload..
+"
+
+[node name="ColorRect" type="ColorRect" parent="Reload/CanvasLayer/Label"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -316.0
+offset_top = -63.0
+offset_right = -149.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.258824)
