@@ -8,11 +8,12 @@ var ammo = max_ammo
 
 signal ammo_spent(ammo,max_ammo)
 
+
 func _physics_process(delta):
 	movement_function()
 	shoot()
 	
-	if Input.is_action_just_pressed("reload"):
+	if Input.is_action_just_pressed("reload") && ammo != max_ammo:
 		reload()
 
 func _process(delta):
