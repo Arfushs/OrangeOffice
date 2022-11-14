@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4ajffb7aylys"]
+
+[ext_resource type="PackedScene" uid="uid://cvhui5t2ykrnh" path="res://Assets/Mesh/Mannequin.glb" id="1_t0ull"]
+
+[node name="Mannequin" instance=ExtResource("1_t0ull")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+
+[node name="Skeleton3D" parent="mannequinRig" index="0"]
+bones/6/rotation = Quaternion(0.182475, 7.22676e-15, 4.35054e-08, 0.983211)
+bones/7/rotation = Quaternion(-0.00610528, -7.55009e-15, -1.45562e-09, 0.999981)
