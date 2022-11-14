@@ -1,19 +1,68 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://bonwxnwkbik6l"]
 
 [ext_resource type="Script" path="res://Scripts/Dummy.gd" id="1_gflw2"]
 [ext_resource type="PackedScene" uid="uid://d4ajffb7aylys" path="res://Scenes/mannequin.tscn" id="2_gp3wg"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://bonwxnwkbik6l"]
+
+[ext_resource type="Script" path="res://Scripts/Dummy.gd" id="1_gflw2"]
+[ext_resource type="PackedScene" uid="uid://d4ajffb7aylys" path="res://Scenes/mannequin.tscn" id="2_gp3wg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4n80k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayetx"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w4v0n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hiht0"]
+albedo_color = Color(0, 0, 0, 1)
+>>>>>>> aafabb1e649393f0cef08fbcfdfd3bf6a736e0f6
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x0fgm"]
 
 [sub_resource type="Animation" id="Animation_rx7s3"]
 resource_name = "Hit"
 length = 0.8
+<<<<<<< HEAD
+=======
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:surface_material_override/0:emission_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+>>>>>>> aafabb1e649393f0cef08fbcfdfd3bf6a736e0f6
 
 [sub_resource type="Animation" id="Animation_vg8y2"]
 resource_name = "Initial"
 
 [sub_resource type="Animation" id="Animation_annyp"]
 length = 0.001
+
+[sub_resource type="Animation" id="Animation_annyp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:surface_material_override/0:emission_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m2ita"]
 _data = {
