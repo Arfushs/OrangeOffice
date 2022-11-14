@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dlfv5hy0blrom"]
+
+[ext_resource type="Texture2D" uid="uid://cfipy0kytopmm" path="res://Assets/Textures/MannequinAlbedo.png" id="1_h12is"]
+[ext_resource type="Texture2D" uid="uid://betgeu7uvov8k" path="res://Assets/Textures/MannequinMR.png" id="2_h3xmh"]
+
+[resource]
+albedo_texture = ExtResource("1_h12is")
+metallic = 1.0
+metallic_texture = ExtResource("2_h3xmh")
+roughness_texture = ExtResource("2_h3xmh")
+roughness_texture_channel = 1
