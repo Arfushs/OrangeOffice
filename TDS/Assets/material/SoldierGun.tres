@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cwg7k0tf57xtu"]
+
+[ext_resource type="Texture2D" uid="uid://df4d1igwgej2g" path="res://Assets/Textures/SoldierTextures/Gun_M.png" id="1_u72ki"]
+[ext_resource type="Texture2D" uid="uid://c0sxie2qub2ik" path="res://Assets/Textures/SoldierTextures/Gun_Alb.png" id="2_vfsdk"]
+
+[resource]
+albedo_texture = ExtResource("1_u72ki")
+metallic = 1.0
+metallic_texture = ExtResource("2_vfsdk")

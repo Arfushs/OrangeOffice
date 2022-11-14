@@ -1,0 +1,139 @@
+[gd_scene load_steps=16 format=3 uid="uid://t1elyahtckcw"]
+
+[ext_resource type="PackedScene" uid="uid://dsia76vxhrj6y" path="res://Assets/Mesh/main character.glb" id="1_7g486"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1e7jm"]
+animation = &"Soldier_Shoot"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_bw42q"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:mixamorig_Hips", "Armature/Skeleton3D:mixamorig_LeftFoot", "Armature/Skeleton3D:mixamorig_LeftLeg", "Armature/Skeleton3D:mixamorig_LeftToeBase", "Armature/Skeleton3D:mixamorig_LeftUpLeg", "Armature/Skeleton3D:mixamorig_RightFoot", "Armature/Skeleton3D:mixamorig_RightLeg", "Armature/Skeleton3D:mixamorig_RightToeBase", "Armature/Skeleton3D:mixamorig_RightUpLeg"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ip1fi"]
+animation = &"Soldier_Rotate_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p7i73"]
+animation = &"Soldier_Rotate_Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6byui"]
+animation = &"Soldier_Idle"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_p4g3y"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_ip1fi")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_p7i73")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_6byui")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_op0wi"]
+animation = &"Soldier_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g1uwn"]
+animation = &"Soldier_Forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ciskr"]
+animation = &"Soldier_Strafe_Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t0hnj"]
+animation = &"Soldier_Strafe_Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_otffn"]
+animation = &"Soldier_Walk_Back"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_qboqs"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_op0wi")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_g1uwn")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_ciskr")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_t0hnj")
+blend_point_3/pos = Vector2(-1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_otffn")
+blend_point_4/pos = Vector2(0, -1)
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_0wgsb"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:mixamorig_LeftArm", "Armature/Skeleton3D:mixamorig_LeftForeArm", "Armature/Skeleton3D:mixamorig_LeftHand", "Armature/Skeleton3D:mixamorig_LeftHandIndex1", "Armature/Skeleton3D:mixamorig_LeftHandIndex2", "Armature/Skeleton3D:mixamorig_LeftHandIndex3", "Armature/Skeleton3D:mixamorig_LeftHandMiddle1", "Armature/Skeleton3D:mixamorig_LeftHandMiddle2", "Armature/Skeleton3D:mixamorig_LeftHandMiddle3", "Armature/Skeleton3D:mixamorig_LeftHandPinky1", "Armature/Skeleton3D:mixamorig_LeftHandPinky2", "Armature/Skeleton3D:mixamorig_LeftHandPinky3", "Armature/Skeleton3D:mixamorig_LeftHandRing1", "Armature/Skeleton3D:mixamorig_LeftHandRing2", "Armature/Skeleton3D:mixamorig_LeftHandRing3", "Armature/Skeleton3D:mixamorig_LeftHandThumb1", "Armature/Skeleton3D:mixamorig_LeftHandThumb2", "Armature/Skeleton3D:mixamorig_LeftHandThumb3", "Armature/Skeleton3D:mixamorig_LeftShoulder", "Armature/Skeleton3D:mixamorig_RightArm", "Armature/Skeleton3D:mixamorig_RightForeArm", "Armature/Skeleton3D:mixamorig_RightHand", "Armature/Skeleton3D:mixamorig_RightHandIndex1", "Armature/Skeleton3D:mixamorig_RightHandIndex2", "Armature/Skeleton3D:mixamorig_RightHandIndex3", "Armature/Skeleton3D:mixamorig_RightHandMiddle1", "Armature/Skeleton3D:mixamorig_RightHandMiddle2", "Armature/Skeleton3D:mixamorig_RightHandMiddle3", "Armature/Skeleton3D:mixamorig_RightHandPinky1", "Armature/Skeleton3D:mixamorig_RightHandPinky2", "Armature/Skeleton3D:mixamorig_RightHandPinky3", "Armature/Skeleton3D:mixamorig_RightHandRing1", "Armature/Skeleton3D:mixamorig_RightHandRing2", "Armature/Skeleton3D:mixamorig_RightHandRing3", "Armature/Skeleton3D:mixamorig_RightHandThumb1", "Armature/Skeleton3D:mixamorig_RightHandThumb2", "Armature/Skeleton3D:mixamorig_RightHandThumb3", "Armature/Skeleton3D:mixamorig_RightShoulder"]
+fadein_time = 0.01
+fadeout_time = 0.2
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q0mgw"]
+graph_offset = Vector2(-919.15, 62.2423)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_1e7jm")
+nodes/Animation/position = Vector2(-196, 415)
+nodes/Blend2/node = SubResource("AnimationNodeBlend2_bw42q")
+nodes/Blend2/position = Vector2(-80, 120)
+nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_p4g3y")
+nodes/BlendSpace1D/position = Vector2(-360, 340)
+nodes/Movement/node = SubResource("AnimationNodeBlendSpace2D_qboqs")
+nodes/Movement/position = Vector2(-420, 140)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_0wgsb")
+nodes/OneShot/position = Vector2(115, 218)
+node_connections = [&"output", 0, &"OneShot", &"Blend2", 0, &"Movement", &"Blend2", 1, &"BlendSpace1D", &"OneShot", 0, &"Blend2", &"OneShot", 1, &"Animation"]
+
+[node name="main character" instance=ExtResource("1_7g486")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(-0.00219044, 0.00346928, -0.893442)
+bones/0/rotation = Quaternion(-0.605066, -0.347431, 0.291317, 0.654462)
+bones/1/rotation = Quaternion(-0.0317109, 0.0559109, 0.0242242, 0.997638)
+bones/2/rotation = Quaternion(0.0236537, 0.0681964, 0.00557532, 0.997376)
+bones/3/rotation = Quaternion(0.0242927, 0.0683459, 0.00396628, 0.997358)
+bones/4/rotation = Quaternion(0.157324, 0.064595, -0.0284983, 0.98502)
+bones/5/rotation = Quaternion(0.00574812, 0.172837, 0.0698179, 0.982456)
+bones/7/rotation = Quaternion(-0.572268, -0.415337, 0.630805, -0.319515)
+bones/8/rotation = Quaternion(0.180839, -0.224483, 0.435591, 0.85274)
+bones/9/rotation = Quaternion(0.0736903, -0.00210534, 0.652371, 0.754305)
+bones/10/rotation = Quaternion(-0.172336, -0.344451, -0.375637, 0.842942)
+bones/11/rotation = Quaternion(0.104045, -0.0374065, 0.159365, 0.981009)
+bones/12/rotation = Quaternion(-0.101379, 0.0645762, 0.0734112, 0.990032)
+bones/13/rotation = Quaternion(-0.0256484, 0.0177407, 0.243693, 0.969351)
+bones/15/rotation = Quaternion(0.263479, -0.00168204, 0.0190918, 0.964475)
+bones/16/rotation = Quaternion(0.511932, 0.000740027, -0.0544901, 0.857296)
+bones/17/rotation = Quaternion(0.206889, -0.00030395, -0.0208863, 0.978141)
+bones/19/rotation = Quaternion(0.34692, -0.0113483, 0.0319491, 0.937282)
+bones/20/rotation = Quaternion(0.499889, -1.7132e-07, -0.0552646, 0.864325)
+bones/21/rotation = Quaternion(0.334847, 1.43424e-07, -0.0370187, 0.941545)
+bones/23/rotation = Quaternion(0.414907, -0.029785, 0.0607878, 0.907342)
+bones/24/rotation = Quaternion(0.507801, 4.55184e-08, -0.0556434, 0.859676)
+bones/25/rotation = Quaternion(0.172882, 1.49885e-08, -0.018944, 0.98476)
+bones/27/rotation = Quaternion(0.318794, -0.0352607, 0.11685, 0.939932)
+bones/28/rotation = Quaternion(0.491177, 1.2746e-07, -0.0533329, 0.869425)
+bones/29/rotation = Quaternion(0.272872, -1.60275e-07, -0.029629, 0.961594)
+bones/31/rotation = Quaternion(0.490643, -0.368363, 0.597277, 0.516564)
+bones/32/rotation = Quaternion(0.386543, 0.0395275, -0.741735, 0.546673)
+bones/33/rotation = Quaternion(0.0284421, 0.00270006, -0.25263, 0.967141)
+bones/34/rotation = Quaternion(-0.205904, 0.341482, 0.201564, 0.894632)
+bones/35/rotation = Quaternion(0.309965, -0.115673, -0.18974, 0.924413)
+bones/36/rotation = Quaternion(-0.0667013, -0.181718, 0.19302, 0.961911)
+bones/37/rotation = Quaternion(-0.16293, -0.0275039, 0.403985, 0.899719)
+bones/39/rotation = Quaternion(0.21208, -0.00221216, -0.00478214, 0.977238)
+bones/40/rotation = Quaternion(0.420419, -1.04767e-07, 0.033696, 0.906704)
+bones/41/rotation = Quaternion(0.431033, 1.14669e-07, 0.0345468, 0.901675)
+bones/43/rotation = Quaternion(0.421785, -0.0487909, 0.100355, 0.899803)
+bones/44/rotation = Quaternion(0.825198, 0.00142407, 0.0678407, 0.560753)
+bones/45/rotation = Quaternion(0.162768, -0.000459802, 0.0152196, 0.986547)
+bones/47/rotation = Quaternion(0.471869, -0.0159685, 0.0296375, 0.881026)
+bones/48/rotation = Quaternion(0.753886, -0.00129015, 0.060595, 0.654203)
+bones/49/rotation = Quaternion(0.417187, 6.18338e-05, 0.0297289, 0.908334)
+bones/51/rotation = Quaternion(0.485173, -0.00131576, 8.20296e-05, 0.874417)
+bones/52/rotation = Quaternion(0.584203, 1.14902e-07, 0.0443071, 0.810398)
+bones/53/rotation = Quaternion(0.43533, -7.55535e-08, 0.0330164, 0.899666)
+bones/55/rotation = Quaternion(0.130528, 0.214286, 0.954112, -0.163444)
+bones/56/rotation = Quaternion(-0.213564, -0.0851407, 0.00590229, 0.973194)
+bones/57/rotation = Quaternion(0.475903, -0.149123, -0.00935166, 0.866713)
+bones/60/rotation = Quaternion(-0.129869, 0.061453, 0.986656, 0.0765981)
+bones/61/rotation = Quaternion(-0.127229, -0.0708738, 0.0134682, 0.989246)
+bones/62/rotation = Quaternion(0.533878, 0.196489, 0.0353871, 0.821653)
+bones/63/rotation = Quaternion(0.295482, -0.0578432, 0.0179266, 0.953427)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_q0mgw")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Blend2/blend_amount = 1.0
+parameters/BlendSpace1D/blend_position = 0
+parameters/Movement/blend_position = Vector2(0, 0)
+parameters/OneShot/active = false

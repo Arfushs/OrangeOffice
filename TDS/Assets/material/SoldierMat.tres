@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ua24472ob4yr"]
+
+[ext_resource type="Texture2D" uid="uid://du7xl4pteacmi" path="res://Assets/Textures/SoldierTextures/soldier_ALB.png" id="1_ys76a"]
+[ext_resource type="Texture2D" uid="uid://dbidvufi6ca3q" path="res://Assets/Textures/SoldierTextures/soldier_MR.png" id="2_qwe43"]
+
+[resource]
+albedo_texture = ExtResource("1_ys76a")
+metallic = 1.0
+metallic_texture = ExtResource("2_qwe43")
+roughness_texture = ExtResource("2_qwe43")
+roughness_texture_channel = 1
