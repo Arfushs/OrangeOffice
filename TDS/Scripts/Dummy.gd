@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var health : float = 40
 
-@onready var anim : AnimationPlayer = $Anim
+@onready var anim : AnimationPlayer = $Mannequin/AnimationPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,11 +19,13 @@ func _process(delta):
 func death():
 	if health<=0:
 		hit()
-		await get_tree().create_timer(0.2).timeout
+		anim.play("MannequinDead")
+		await get_tree().create_timer(0.5).timeout
 		queue_free()
 		
 func hit():
-	anim.play("Hit")
+	anim.play("Mannequin_Hit")
+
 		
 
 
@@ -32,9 +34,10 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("Bullet"):
 		
 		health -= area.damage
-		print(health)
+		##print(health)
 		hit()
 		
 func knockback(direction):
 	
 	global_translate(direction * -0.35)
+	

@@ -4,6 +4,9 @@ extends CharacterBody3D
 @export var SPEED = 10.0
 @export var Bullet: PackedScene
 @export var max_ammo = 10
+
+@onready var anim = $main_character/AnimationPlayer
+
 var ammo = max_ammo
 
 signal ammo_spent(ammo,max_ammo)
@@ -64,7 +67,7 @@ func reload():
 		
 		
 		
-		
+
 		
 		
 		
