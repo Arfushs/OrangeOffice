@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://do7m174ff4ets"
-path="res://.godot/imported/Gun Reload sound effect.wav-f80fd85da070dc92d0130d4acc598de6.sample"
+path="res://.godot/imported/Gun Reload sound effect.wav-e97c03968ea7ce7b4297e827e6098b35.sample"
 
 [deps]
 
-source_file="res://Gun Reload sound effect.wav"
-dest_files=["res://.godot/imported/Gun Reload sound effect.wav-f80fd85da070dc92d0130d4acc598de6.sample"]
+source_file="res://Assets/Sound/Gun Reload sound effect.wav"
+dest_files=["res://.godot/imported/Gun Reload sound effect.wav-e97c03968ea7ce7b4297e827e6098b35.sample"]
 
 [params]
 

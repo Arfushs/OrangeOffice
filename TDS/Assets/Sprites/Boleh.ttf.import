@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cxirj0jt5bjx2"
-path="res://.godot/imported/Boleh.ttf-167e662a7c214c99842bf611622d32b7.fontdata"
+path="res://.godot/imported/Boleh.ttf-e51dab6a1a5af8c3696cec7e0685b5d8.fontdata"
 
 [deps]
 
-source_file="res://Boleh.ttf"
-dest_files=["res://.godot/imported/Boleh.ttf-167e662a7c214c99842bf611622d32b7.fontdata"]
+source_file="res://Assets/Sprites/Boleh.ttf"
+dest_files=["res://.godot/imported/Boleh.ttf-e51dab6a1a5af8c3696cec7e0685b5d8.fontdata"]
 
 [params]
 
