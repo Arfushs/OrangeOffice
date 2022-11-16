@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://t1elyahtckcw"]
 
-[ext_resource type="PackedScene" uid="uid://3d7scvqwxir2" path="res://Assets/Mesh/main character.glb" id="1_7g486"]
+[ext_resource type="PackedScene" uid="uid://dsia76vxhrj6y" path="res://Assets/Mesh/main character.glb" id="1_7g486"]
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_0wgsb"]
 filter_enabled = true
@@ -146,7 +146,7 @@ bones/62/rotation = Quaternion(0.53735, 0.195709, 0.0344628, 0.819613)
 bones/63/rotation = Quaternion(0.295482, -0.0578432, 0.0179266, 0.953427)
 
 [node name="Armature@GeneralSkeleton@BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.0117629, -0.190546, 0.981608, 0.012546, 0.981627, 0.190399, -0.999852, 0.0100756, 0.0139372, -0.0650714, 0.427323, -1.45281)
+transform = Transform3D(0.0117647, -0.190547, 0.981607, 0.0125464, 0.981627, 0.190401, -0.999852, 0.0100755, 0.0139392, -0.0650712, 0.427322, -1.45281)
 bone_name = "mixamorig_RightHand"
 bone_idx = 34
 
