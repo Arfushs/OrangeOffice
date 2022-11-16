@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=17 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
-[ext_resource type="Texture2D" uid="uid://ctgn4jmnu2kph" path="res://123628.png" id="3_kn7mp"]
-[ext_resource type="FontFile" uid="uid://cxirj0jt5bjx2" path="res://Boleh.ttf" id="4_ee1k1"]
+[ext_resource type="Material" uid="uid://kk41ijvhtgyd" path="res://Assets/Textures/kenney_prototypetextures/Dark/new_standard_material_3d.tres" id="2_jfo6n"]
+[ext_resource type="Texture2D" uid="uid://ctgn4jmnu2kph" path="res://Assets/Sprites/123628.png" id="3_kn7mp"]
+[ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/Textures/kenney_prototypetextures/Dark/test1.tres" id="3_qkqi2"]
+[ext_resource type="FontFile" uid="uid://cxirj0jt5bjx2" path="res://Assets/Sprites/Boleh.ttf" id="4_ee1k1"]
 [ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
@@ -41,11 +43,13 @@ shape = SubResource("WorldBoundaryShape3D_6fuqt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+material_override = ExtResource("3_qkqi2")
 mesh = SubResource("PlaneMesh_8po2a")
 surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(3.48709, 0, 0, 0, 1, 0, 0, 0, 3.48709, 0, 0, 0)
+material_override = ExtResource("2_jfo6n")
 mesh = SubResource("BoxMesh_r5ya3")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]

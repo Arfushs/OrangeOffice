@@ -1,3 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://kk41ijvhtgyd"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://kk41ijvhtgyd"]
+
+[ext_resource type="Texture2D" uid="uid://3ie8l6y0pixj" path="res://Assets/Textures/kenney_prototypetextures/Light/texture_07.png" id="1_p1olh"]
 
 [resource]
+albedo_texture = ExtResource("1_p1olh")
+uv1_triplanar = true
+uv1_world_triplanar = true
+billboard_keep_scale = true
