@@ -46,7 +46,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 SPEED = 15.0
-max_ammo = 10
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 7.644, 0.531)

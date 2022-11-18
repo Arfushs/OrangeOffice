@@ -15,7 +15,7 @@ signal ammo_spent(ammo,max_ammo)
 
 func _physics_process(delta):
 	movement_function()
-	animHandle()
+	animHandle(delta)
 	shoot()
 	
 	if Input.is_action_just_pressed("reload") && ammo != max_ammo:
@@ -69,13 +69,26 @@ func reload():
 	ammo = max_ammo
 	emit_signal("ammo_spent",ammo,max_ammo)
 		
-func animHandle():
-	
+func animHandle(delta):
+	# Movement Anim
 	var tempVector1 = rotator.global_transform.basis * Vector3(input_dir.x,0,input_dir.y)
-	print(tempVector1.normalized())
 	var animVector:= Vector2(tempVector1.x,tempVector1.z)
 	anim.set("parameters/Movement_vector/blend_position", animVector)
-	if (velocity != Vector3(0,0,0)):
-		anim.set("parameters/turnblending/blend_amount", 1)
+	
+	#Rotation Anim
+	if (velocity == Vector3(0,0,0)):
+		anim.set("parameters/Turnblending/blend_amount", 1)
+		print("true")
+	else:
+		anim.set("parameters/Turnblending/blend_amount", 0)
+	var deltaRot:float = 0
+	deltaRot = rotator.rotation.y
+	await get_tree().create_timer(.1).timeout
+	deltaRot = (rotator.rotation.y - deltaRot) * 100
+	print(deltaRot)
+	#deltaRot = deltaRot
+	anim.set("parameters/Turning_float/blend_position", deltaRot)
+
+	
 		
 
