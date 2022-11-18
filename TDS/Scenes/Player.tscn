@@ -25,6 +25,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49384, -1.0923)
 [node name="main_character" parent="Rotation" instance=ExtResource("3_ddvlc")]
 transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 0, 0)
 
+[node name="Skeleton3D" parent="Rotation/main_character/Armature" index="0"]
+bones/0/position = Vector3(-0.000760641, -1.86525e-05, -0.889217)
+bones/0/rotation = Quaternion(-0.60328, -0.350932, 0.290205, 0.654738)
+bones/1/rotation = Quaternion(-0.0320349, 0.055318, 0.0238965, 0.997669)
+bones/2/rotation = Quaternion(0.0231026, 0.0678319, 0.00498074, 0.997417)
+bones/3/rotation = Quaternion(0.0237184, 0.0680186, 0.00329957, 0.997397)
+bones/4/rotation = Quaternion(0.156253, 0.0648982, -0.0279742, 0.985186)
+bones/5/rotation = Quaternion(0.0056896, 0.173851, 0.0717448, 0.982139)
+bones/7/rotation = Quaternion(-0.573456, -0.41364, 0.633326, -0.314559)
+bones/8/rotation = Quaternion(0.182971, -0.227231, 0.436114, 0.851289)
+bones/9/rotation = Quaternion(0.0739748, -0.00209912, 0.65489, 0.752092)
+bones/10/rotation = Quaternion(-0.167424, -0.335578, -0.389253, 0.841332)
+bones/31/rotation = Quaternion(0.491758, -0.367688, 0.596915, 0.516403)
+bones/32/rotation = Quaternion(0.393329, 0.0406177, -0.737833, 0.547032)
+bones/33/rotation = Quaternion(0.0289559, 0.00269667, -0.257196, 0.965922)
+bones/34/rotation = Quaternion(-0.204985, 0.338758, 0.210783, 0.893753)
+bones/55/rotation = Quaternion(0.133148, 0.227112, 0.949599, -0.170159)
+bones/56/rotation = Quaternion(-0.236002, -0.0804696, 0.00740939, 0.968387)
+bones/57/rotation = Quaternion(0.483244, -0.15043, -0.0127145, 0.862372)
+bones/58/rotation = Quaternion(0.296179, 0.057802, -0.01796, 0.953213)
+bones/60/rotation = Quaternion(-0.128084, 0.0812868, 0.9856, 0.0746957)
+bones/61/rotation = Quaternion(-0.166543, -0.0719358, 0.0176455, 0.983248)
+bones/62/rotation = Quaternion(0.55056, 0.193559, 0.0338339, 0.811341)
+bones/63/rotation = Quaternion(0.295482, -0.0578432, 0.0179266, 0.953427)
+
+[node name="Armature@GeneralSkeleton@BoneAttachment3D" parent="Rotation/main_character/Armature/Skeleton3D" index="1"]
+transform = Transform3D(-0.0104176, -0.201291, 0.979476, 0.0529265, 0.978045, 0.20156, -0.998544, 0.0539401, 0.000464708, -0.0654419, 0.425597, -1.44829)
+
+[node name="GunBarrel" parent="Rotation/main_character" index="2"]
+transform = Transform3D(0.0288779, 0.202164, -0.978759, 0.997981, -0.0575469, 0.0175612, -0.0527807, -0.977491, -0.20346, -0.0744018, 1.5179, 0.697518)
+
 [node name="ReloadSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jcp30")
 
@@ -51,6 +82,7 @@ text = "Press R to Reload..
 "
 
 [node name="ColorRect" type="ColorRect" parent="Reload/CanvasLayer/Label"]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -63,3 +95,5 @@ offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 0.258824)
+
+[editable path="Rotation/main_character"]
