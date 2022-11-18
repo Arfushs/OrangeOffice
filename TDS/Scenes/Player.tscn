@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://inviklenwnip"]
+[gd_scene load_steps=7 format=3 uid="uid://inviklenwnip"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gry5r"]
 [ext_resource type="PackedScene" uid="uid://d2dc2lmft2ss" path="res://Scenes/bullet.tscn" id="2_m8j2t"]
@@ -7,18 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://c1r2im1piq4s3" path="res://Assets/Sound/Gunshot Sound Effect Single Shot.wav" id="4_yj0gr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8epbe"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_64p1j"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3poca"]
-albedo_color = Color(0.298039, 1, 0, 1)
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 1.52
-
-[sub_resource type="BoxMesh" id="BoxMesh_0vnny"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cf8wp"]
-albedo_color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_gry5r")
@@ -31,28 +19,10 @@ shape = SubResource("CapsuleShape3D_8epbe")
 
 [node name="Rotation" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Rotation"]
-transform = Transform3D(0.832265, 0, 0, 0, 1, 0, 0, 0, 0.832265, 0, 1.0337, 0)
-visible = false
-mesh = SubResource("CapsuleMesh_64p1j")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_3poca")
-
-[node name="Glass" type="MeshInstance3D" parent="Rotation"]
-transform = Transform3D(0.707684, 0, 0, 0, 0.230807, 0, 0, 0, 0.455681, 0, 1.64446, -0.251459)
-visible = false
-mesh = SubResource("BoxMesh_0vnny")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_cf8wp")
-
-[node name="Gun" type="MeshInstance3D" parent="Rotation"]
-transform = Transform3D(-9.30091, 0, -3.67329, 0, 10, 0, 3.67329, 0, -9.30091, 0.585842, 1.06156, -0.507213)
-visible = false
-
 [node name="Marker3D" type="Marker3D" parent="Rotation"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12916, -1.7584)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49384, -1.0923)
 
-[node name="main character" parent="Rotation" instance=ExtResource("3_ddvlc")]
+[node name="main_character" parent="Rotation" instance=ExtResource("3_ddvlc")]
 transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 0, 0)
 
 [node name="ReloadSound" type="AudioStreamPlayer" parent="."]

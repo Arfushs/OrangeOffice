@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var Bullet: PackedScene
 @export var max_ammo = 10
 
-@onready var anim = $main_character/AnimationPlayer
+@onready var anim : AnimationTree = $Rotation/main_character/AnimationTree
 
 var ammo = max_ammo
 
@@ -33,9 +33,11 @@ func movement_function():
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		anim.set("parameters/Movement_vector/blend_position",Vector2(0,0))
 
 	move_and_slide()
 
@@ -45,12 +47,13 @@ func shoot():
 	if Input.is_action_just_pressed("ui_accept") && ammo != 0:
 		
 		$shoot.play()
+		anim.set("parameters/FireGate/active",true)
 		
 		var new_bullet = Bullet.instantiate()
 		new_bullet.global_transform = $Rotation/Marker3D.global_transform
-		new_bullet.scale.x = 0.1
-		new_bullet.scale.y = 0.2
-		new_bullet.scale.z = 0.2
+		new_bullet.scale.x = 0.07
+		new_bullet.scale.y = 0.07
+		new_bullet.scale.z = 0.07
 		
 		var scene_root = get_tree().get_root().get_children()[0]
 		ammo -=1
@@ -67,7 +70,6 @@ func reload():
 		
 		
 		
-
 		
 		
 		
