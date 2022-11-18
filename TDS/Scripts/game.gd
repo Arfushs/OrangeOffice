@@ -3,7 +3,7 @@ extends Node3D
 @onready var player : CharacterBody3D = $CharacterBody3D 
 @onready var camera : Camera3D = $CharacterBody3D/Camera3D
 @onready var mesh : Node3D = $"Debug Pointer"
-@onready var Text : Label = $PlayerUI/CanvasLayer/Label
+@onready var Text : Label = $PlayerUI/CanvasLayer/ColorRect/Label
 
 var ray_origin = Vector3()
 var ray_target = Vector3()
@@ -38,4 +38,7 @@ func _physics_process(delta):
 
 func _on_character_body_3d_ammo_spent(ammo, max_ammo):
 	
-	Text.text = str(ammo) + "/" + str(max_ammo)
+	if ammo <10:
+		Text.text = "  " + str(ammo) + "/" + str(max_ammo)
+	else:
+		Text.text = str(ammo) + "/" + str(max_ammo)

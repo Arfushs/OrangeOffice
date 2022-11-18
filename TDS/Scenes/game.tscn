@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
-[ext_resource type="Texture2D" uid="uid://ctgn4jmnu2kph" path="res://Assets/Sprites/123628.png" id="3_kn7mp"]
 [ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/Textures/kenney_prototypetextures/Dark/test1.tres" id="3_qkqi2"]
-[ext_resource type="FontFile" uid="uid://cxirj0jt5bjx2" path="res://Assets/Sprites/Boleh.ttf" id="4_ee1k1"]
+[ext_resource type="Texture2D" uid="uid://bn7bqn3knlvq7" path="res://1261824.png" id="4_43ms7"]
+[ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="5_e6anb"]
 [ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
@@ -76,37 +76,48 @@ offset_bottom = 647.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
 
-[node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="PlayerUI/CanvasLayer"]
+offset_left = 958.0
+offset_top = 529.0
+offset_right = 1140.0
+offset_bottom = 619.0
+color = Color(0, 0, 0, 0.298039)
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/ColorRect"]
+modulate = Color(0.509804, 0.509804, 0.509804, 1)
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -132.0
-offset_top = -132.0
-offset_right = 380.0
-offset_bottom = 380.0
+offset_left = -87.9999
+offset_top = -89.9999
+offset_right = 283.0
+offset_bottom = 281.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.239994, 0.239994)
-texture = ExtResource("3_kn7mp")
+texture = ExtResource("4_43ms7")
+ignore_texture_size = true
 
-[node name="Label" type="Label" parent="PlayerUI/CanvasLayer"]
+[node name="Label" type="Label" parent="PlayerUI/CanvasLayer/ColorRect"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -169.0
-offset_top = -95.0
-offset_right = -59.0
-offset_bottom = -37.0
+offset_left = -179.0
+offset_top = -68.0
+offset_right = -69.0
+offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("4_ee1k1")
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_e6anb")
 theme_override_font_sizes/font_size = 45
 text = "10/10"
 

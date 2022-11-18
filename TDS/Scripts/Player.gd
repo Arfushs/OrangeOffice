@@ -78,14 +78,14 @@ func animHandle(delta):
 	#Rotation Anim
 	if (velocity == Vector3(0,0,0)):
 		anim.set("parameters/Turnblending/blend_amount", 1)
-		print("true")
+		
 	else:
 		anim.set("parameters/Turnblending/blend_amount", 0)
 	var deltaRot:float = 0
 	deltaRot = rotator.rotation.y
 	await get_tree().create_timer(.1).timeout
-	deltaRot = (rotator.rotation.y - deltaRot) * 100
-	print(deltaRot)
+	deltaRot = (rotator.rotation.y - deltaRot) * 20
+	
 	#deltaRot = deltaRot
 	anim.set("parameters/Turning_float/blend_position", deltaRot)
 
