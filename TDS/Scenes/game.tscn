@@ -1,18 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=14 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
-[ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/Textures/kenney_prototypetextures/Dark/test1.tres" id="3_qkqi2"]
+[ext_resource type="Material" uid="uid://dik73ac6jhdbf" path="res://Assets/material/new_standard_material_3d.tres" id="2_jqebi"]
 [ext_resource type="Texture2D" uid="uid://bn7bqn3knlvq7" path="res://1261824.png" id="4_43ms7"]
 [ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="5_e6anb"]
 [ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_8po2a"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3m3x"]
-albedo_color = Color(0.00784314, 0.145098, 0.219608, 1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_j5k1w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dux8q"]
 
@@ -39,10 +36,9 @@ script = ExtResource("1_u6w4i")
 shape = SubResource("WorldBoundaryShape3D_6fuqt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
-material_override = ExtResource("3_qkqi2")
-mesh = SubResource("PlaneMesh_8po2a")
-surface_material_override/0 = SubResource("StandardMaterial3D_e3m3x")
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_j5k1w")
+surface_material_override/0 = ExtResource("2_jqebi")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 SPEED = 15.0
@@ -85,7 +81,6 @@ color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/ColorRect"]
 modulate = Color(0.509804, 0.509804, 0.509804, 1)
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -102,7 +97,6 @@ texture = ExtResource("4_43ms7")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/ColorRect"]
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -122,9 +116,9 @@ theme_override_font_sizes/font_size = 45
 text = "10/10"
 
 [node name="Dummy" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.95998, 0, -11.482)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.95998, 0, -11.482)
 
 [node name="Dummy2" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(-0.558656, 0, -1.39209, 0, 1.5, 0, 1.39209, 0, -0.558656, 8.95998, 0, 2.27992)
+transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 8.95998, 0, 2.27992)
 
 [connection signal="ammo_spent" from="CharacterBody3D" to="." method="_on_character_body_3d_ammo_spent"]

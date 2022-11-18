@@ -8,23 +8,24 @@ radius = 0.45552
 height = 1.55084
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wl8u3"]
-radius = 0.330964
-height = 1.84853
+radius = 0.59695
+height = 1.95037
 
 [node name="Dummy" type="CharacterBody3D" groups=["Enemy"]]
 script = ExtResource("1_gflw2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.26274, 0, 0, 0, 1, 0, 0.782396, 0)
+transform = Transform3D(1, 0, 0, 0, 1.26274, 0, 0, 0, 1, 0, 0.983382, 0)
+visible = false
 shape = SubResource("CapsuleShape3D_x0fgm")
 
 [node name="Hitbox" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.719323, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.881851, 0)
 shape = SubResource("CapsuleShape3D_wl8u3")
 
 [node name="Mannequin" parent="." instance=ExtResource("2_gp3wg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156721, 0)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
