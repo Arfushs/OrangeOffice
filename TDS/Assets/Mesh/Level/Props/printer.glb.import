@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bghhj3cc3ts4s"
+uid="uid://dqmh3fgpq4j4r"
 path="res://.godot/imported/printer.glb-26c969a1998a0c245ab15cf18b983470.scn"
 
 [deps]
@@ -31,11 +31,6 @@ _subresources={
 "TextureAtlas": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/material/GlobalMaterial.tres"
-}
-},
-"nodes": {
-"PATH:printer2": {
-"generate/physics": true
 }
 }
 }

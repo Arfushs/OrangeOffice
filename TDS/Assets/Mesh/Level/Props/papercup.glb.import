@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bktlts6r6u0db"
+uid="uid://bvfbaqxs7wur3"
 path="res://.godot/imported/papercup.glb-5ce4e74a5ec64439531d0dbc6991546a.scn"
 
 [deps]
@@ -30,12 +30,11 @@ _subresources={
 "materials": {
 "TextureAtlas": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/material/GlobalMaterial.tres"
+"use_external/path": "res://Assets/material/GlobalMaterialTwosided.tres"
 }
 },
 "nodes": {
 "PATH:Cup": {
-"generate/physics": true,
 "physics/body_type": 1,
 "physics/shape_type": 5,
 "primitive/height": 0.15,

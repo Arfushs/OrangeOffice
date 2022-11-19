@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2mse32a1325c"]
+
+[ext_resource type="PackedScene" uid="uid://cdk5qw6qiyi2w" path="res://Assets/Mesh/Level/Props/glass.glb" id="2_mvsxb"]
+[ext_resource type="PackedScene" uid="uid://kyh5ht465dt" path="res://Assets/Mesh/Level/Props/Phone.glb" id="3_sr2mt"]
+[ext_resource type="PackedScene" uid="uid://cj5a1kaocbgnx" path="res://Assets/Mesh/Level/Props/monitorOFF.glb" id="4_42tx6"]
+[ext_resource type="PackedScene" uid="uid://dsqckk1aqo5jt" path="res://Assets/Mesh/Level/Props/mouseandpad.glb" id="5_0ks1f"]
+[ext_resource type="PackedScene" uid="uid://dcpt42xexh4dq" path="res://Assets/Mesh/Level/Props/keyboard.glb" id="5_cessq"]
+[ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="6_yc3ob"]
+[ext_resource type="PackedScene" uid="uid://by8a3isga1vyp" path="res://Assets/Mesh/Level/Props/soda.glb" id="7_ieb44"]
+[ext_resource type="PackedScene" uid="uid://dl0nt4sbn1jjl" path="res://Assets/Mesh/monitor_on_Withlight.tscn" id="8_kiviq"]
+[ext_resource type="PackedScene" uid="uid://g53n6cpwcrkb" path="res://Assets/Mesh/Level/Props/DoubleCubicle.glb" id="9_eyvmh"]
+
+[node name="Cubicle" type="Node3D"]
+
+[node name="keyboard" parent="." instance=ExtResource("5_cessq")]
+transform = Transform3D(-0.654345, 0, -0.756197, 0, 1, 0, 0.756197, 0, -0.654345, -0.748892, 0.881034, 0.6)
+
+[node name="glass" parent="." instance=ExtResource("2_mvsxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.180597, 0.881894, 0.838525)
+
+[node name="monitorOFF" parent="." instance=ExtResource("4_42tx6")]
+transform = Transform3D(0.756196, 0, -0.654345, 0, 1, 0, 0.654345, 0, 0.756196, -0.350275, 0.86982, 0.379911)
+
+[node name="mouseandpad" parent="." instance=ExtResource("5_0ks1f")]
+transform = Transform3D(-0.976068, 0, -0.217462, 0, 1, 0, 0.217462, 0, -0.976068, -0.341853, 0.880001, 0.992205)
+
+[node name="Phone" parent="." instance=ExtResource("3_sr2mt")]
+transform = Transform3D(-0.0685648, 0, -0.863307, 0, 0.887749, 0, 0.863307, 0, -0.0685648, -1.15427, 0.86982, 0.22841)
+
+[node name="keyboard2" parent="." instance=ExtResource("5_cessq")]
+transform = Transform3D(0.89145, 0, -0.453119, 0, 1, 0, 0.453119, 0, 0.89145, 0.515852, 0.87972, 0.811588)
+
+[node name="monitorOFF2" parent="." instance=ExtResource("4_42tx6")]
+transform = Transform3D(-0.0999277, 0, 0.994995, 0, 1, 0, -0.994995, 0, -0.0999277, 0.113302, 0.856797, 1.00737)
+
+[node name="monitorON" parent="." instance=ExtResource("8_kiviq")]
+transform = Transform3D(0.790358, 0, 0.612645, 0, 1, 0, -0.612645, 0, 0.790358, 0.434636, 0.856797, 0.252601)
+
+[node name="mouseandpad2" parent="." instance=ExtResource("5_0ks1f")]
+transform = Transform3D(0.880427, 0, -0.47418, 0, 1, 0, 0.47418, 0, 0.880427, 0.8171, 0.881257, 0.436981)
+
+[node name="soda" parent="mouseandpad2" instance=ExtResource("7_ieb44")]
+transform = Transform3D(0.656254, 0, 0.353445, 0, 0.74538, 0, -0.353445, 0, 0.656254, 0.104266, 0, -0.336118)
+
+[node name="seat" parent="." instance=ExtResource("6_yc3ob")]
+transform = Transform3D(0.65798, 0, 0.753035, 0, 1, 0, -0.753035, 0, 0.65798, -1.56719, 0.101542, 1.68084)
+
+[node name="seat4" parent="." instance=ExtResource("6_yc3ob")]
+transform = Transform3D(0.708254, 0, -0.705958, 0, 1, 0, 0.705958, 0, 0.708254, 1.75161, 0.101542, 1.48142)
+
+[node name="DoubleCubicle" parent="." instance=ExtResource("9_eyvmh")]

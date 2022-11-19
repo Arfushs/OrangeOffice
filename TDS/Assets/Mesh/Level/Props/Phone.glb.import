@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dcagugu5edkfb"
+uid="uid://kyh5ht465dt"
 path="res://.godot/imported/Phone.glb-217091582f106ca43f9fa42d44aac6fe.scn"
 
 [deps]
@@ -35,7 +35,6 @@ _subresources={
 },
 "nodes": {
 "PATH:Cube002": {
-"generate/physics": true,
 "physics/body_type": 1
 }
 }

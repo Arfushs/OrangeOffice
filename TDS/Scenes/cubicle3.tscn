@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://da7iw3ycr5cen"]
+
+[ext_resource type="PackedScene" uid="uid://cj5a1kaocbgnx" path="res://Assets/Mesh/Level/Props/monitorOFF.glb" id="4_42tx6"]
+[ext_resource type="PackedScene" uid="uid://dsqckk1aqo5jt" path="res://Assets/Mesh/Level/Props/mouseandpad.glb" id="5_0ks1f"]
+[ext_resource type="PackedScene" uid="uid://dcpt42xexh4dq" path="res://Assets/Mesh/Level/Props/keyboard.glb" id="5_cessq"]
+[ext_resource type="PackedScene" uid="uid://21iabl1jkm6k" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="6_bhv7g"]
+[ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="6_yc3ob"]
+[ext_resource type="PackedScene" uid="uid://by8a3isga1vyp" path="res://Assets/Mesh/Level/Props/soda.glb" id="7_mbxl8"]
+
+[node name="Cubicle" type="Node3D"]
+
+[node name="keyboard2" parent="." instance=ExtResource("5_cessq")]
+transform = Transform3D(0.89145, 0, -0.453119, 0, 1, 0, 0.453119, 0, 0.89145, 0.515852, 0.87972, 0.811588)
+
+[node name="monitorOFF2" parent="." instance=ExtResource("4_42tx6")]
+transform = Transform3D(0.436331, 0, 0.899787, 0, 1, 0, -0.899787, 0, 0.436331, 0.228512, 0.856797, 0.532654)
+
+[node name="monitorOFF3" parent="." instance=ExtResource("4_42tx6")]
+transform = Transform3D(-0.163171, 0, 0.986598, 0, 1, 0, -0.986598, 0, -0.163171, 0.112159, 0.856797, 1.44782)
+
+[node name="mouseandpad2" parent="." instance=ExtResource("5_0ks1f")]
+transform = Transform3D(0.880427, 0, -0.47418, 0, 1, 0, 0.47418, 0, 0.880427, 0.8171, 0.881257, 0.436981)
+
+[node name="seat4" parent="." instance=ExtResource("6_yc3ob")]
+transform = Transform3D(0.0273284, 0, -0.999626, 0, 1, 0, 0.999626, 0, 0.0273284, 2.001, 0.0874633, 1.42926)
+
+[node name="SingleCubicle" parent="." instance=ExtResource("6_bhv7g")]
+
+[node name="soda" parent="." instance=ExtResource("7_mbxl8")]
+transform = Transform3D(0.727916, 0, 0, 0, 0.727916, 0, 0, 0, 0.727916, 1.279, 0.890013, 0.267871)

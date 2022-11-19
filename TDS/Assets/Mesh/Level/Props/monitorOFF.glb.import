@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dk03xd4pujicr"
+uid="uid://cj5a1kaocbgnx"
 path="res://.godot/imported/monitorOFF.glb-34a8eaef8af4fa5fcac285c05d9ea439.scn"
 
 [deps]
@@ -35,7 +35,6 @@ _subresources={
 },
 "nodes": {
 "PATH:MontiorOFF": {
-"generate/physics": true,
 "physics/body_type": 1,
 "physics/shape_type": 1
 }

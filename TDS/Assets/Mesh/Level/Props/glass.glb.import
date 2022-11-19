@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://vavfemi2svbl"
+uid="uid://cdk5qw6qiyi2w"
 path="res://.godot/imported/glass.glb-409a6269f1ab2873064ddb2b677945c5.scn"
 
 [deps]
@@ -35,7 +35,6 @@ _subresources={
 },
 "nodes": {
 "PATH:Glass": {
-"generate/physics": true,
 "physics/body_type": 1,
 "physics/shape_type": 1
 }

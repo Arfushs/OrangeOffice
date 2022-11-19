@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://csxr2q2ylai6k"
+uid="uid://dxrhlvyyy11sg"
 path="res://.godot/imported/Clock.glb-8083c57126c725fb762efb130aadede8.scn"
 
 [deps]
@@ -30,7 +30,7 @@ _subresources={
 "materials": {
 "GlassMat1": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/material/glassmat1.tres"
+"use_external/path": "res://Assets/material/glassmat2.tres"
 },
 "TextureAtlas": {
 "use_external/enabled": true,

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgk20qp4xfsok"]
+
+[ext_resource type="PackedScene" uid="uid://bxkm3an8qwuja" path="res://Assets/Mesh/Level/WindowWall.glb" id="1_01o2e"]
+[ext_resource type="Material" uid="uid://bcmpag1ktoy03" path="res://Assets/material/glassmat2.tres" id="2_l5te1"]
+
+[node name="WindowWall" instance=ExtResource("1_01o2e")]
+
+[node name="Window1002" parent="." index="0"]
+surface_material_override/1 = ExtResource("2_l5te1")

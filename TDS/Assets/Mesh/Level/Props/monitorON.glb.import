@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cgjtphls77y0b"
+uid="uid://dfkrpsu28xtqm"
 path="res://.godot/imported/monitorON.glb-b9f00149309d6e2dbb07085be7a90cb8.scn"
 
 [deps]
@@ -35,7 +35,6 @@ _subresources={
 },
 "nodes": {
 "PATH:MontiorON": {
-"generate/physics": true,
 "physics/shape_type": 1
 }
 }
