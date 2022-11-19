@@ -8,8 +8,14 @@ extends Node3D
 var ray_origin = Vector3()
 var ray_target = Vector3()
 
+var time = 0
 
-
+func _process(delta): #Time
+	time +=delta
+	var secs = fmod(time,60)
+	var min = fmod(time,60*60) / 60
+	var time_passed = "%02d : %02d" % [min,secs]
+	$PlayerUI/CanvasLayer/ColorRect/time_label.text = time_passed
 
 func _physics_process(delta):
 	
@@ -48,6 +54,7 @@ func end_game():
 	
 	if get_tree().get_nodes_in_group("Enemy"): ## Sahnede Enemy var mı yok mu
 		pass
+	
 		
 
 
