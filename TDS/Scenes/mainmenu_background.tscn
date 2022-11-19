@@ -103,7 +103,8 @@ skeleton = NodePath("../WindowWall2")
 environment = SubResource("Environment_prmpl")
 
 [node name="Camera3D" type="Camera3D" parent="MeshInstance3D2/WorldEnvironment"]
-transform = Transform3D(-0.931431, -0.109281, 0.347122, 1.57385e-08, 0.953848, 0.30029, -0.363918, 0.279699, -0.888444, -0.198867, 1.47997, 1.90687)
+transform = Transform3D(-0.854459, -0.156222, 0.495474, 0, 0.953717, 0.300706, -0.519519, 0.256941, -0.814912, -0.198867, 1.47997, 1.90687)
+fov = 59.3
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.761199, 0.648519, 0, -0.648519, 0.761199, 0, 0, 0)
@@ -156,29 +157,37 @@ shape = SubResource("WorldBoundaryShape3D_3dmnn")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.226
+anchor_top = 0.469
+anchor_right = 0.226
+anchor_bottom = 0.469
+offset_left = -260.352
+offset_top = 0.0879822
+offset_right = -220.352
+offset_bottom = 40.088
+grow_vertical = 2
 script = ExtResource("17_0xcml")
 
 [node name="StartGame" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_left = 142.0
-offset_top = 211.0
-offset_right = 379.0
-offset_bottom = 269.0
+anchors_preset = -1
+anchor_left = 6.587
+anchor_top = -1.45
+anchor_right = 6.587
+anchor_bottom = -1.45
+offset_left = -118.48
+offset_top = -29.0
+offset_right = 118.52
+offset_bottom = 29.0
 mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/StartGame"]
-layout_mode = 1
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/StartGame"]
-layout_mode = 1
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -186,7 +195,6 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/StartGame"]
-layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -198,29 +206,30 @@ theme_override_font_sizes/font_size = 40
 text = "START GAME"
 
 [node name="Button" type="Button" parent="Control/StartGame"]
-layout_mode = 0
 offset_right = 236.0
 offset_bottom = 58.0
 flat = true
 
 [node name="Quit" type="ColorRect" parent="Control"]
-layout_mode = 1
-offset_left = 142.0
-offset_top = 320.0
-offset_right = 379.0
-offset_bottom = 378.0
+anchors_preset = -1
+anchor_left = 6.587
+anchor_top = 1.275
+anchor_right = 6.587
+anchor_bottom = 1.275
+offset_left = -118.48
+offset_top = -29.0
+offset_right = 118.52
+offset_bottom = 29.0
 mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/Quit"]
-layout_mode = 1
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/Quit"]
-layout_mode = 1
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -228,7 +237,6 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/Quit"]
-layout_mode = 1
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -240,7 +248,6 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT GAME"
 
 [node name="Button2" type="Button" parent="Control/Quit"]
-layout_mode = 1
 offset_left = 1.0
 offset_right = 237.0
 offset_bottom = 58.0

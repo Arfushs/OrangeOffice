@@ -844,3 +844,9 @@ shape = SubResource("WorldBoundaryShape3D_kh38s")
 [node name="Dummies" type="Node3D" parent="."]
 
 [node name="Dummy" parent="Dummies" instance=ExtResource("19_r6vja")]
+
+[node name="Dummy2" parent="Dummies" instance=ExtResource("19_r6vja")]
+transform = Transform3D(-0.483267, 0, -0.875473, 0, 1, 0, 0.875473, 0, -0.483267, 17.3273, 0, -2.12743)
+
+[node name="Dummy3" parent="Dummies" instance=ExtResource("19_r6vja")]
+transform = Transform3D(-0.911612, 0, -0.411053, 0, 1, 0, 0.411053, 0, -0.911612, 17.3273, 0, 9.48862)

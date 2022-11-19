@@ -8,11 +8,13 @@ extends Node3D
 var ray_origin = Vector3()
 var ray_target = Vector3()
 
+var arrow = load("res://Assets/Sprites/crosshair184.png")
+
 var time = 0
 
 func _ready():
 	$AudioStreamPlayer.play()
-
+	Input.set_custom_mouse_cursor(arrow)
 
 func _process(delta): #Time
 	
