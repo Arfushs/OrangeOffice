@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://0seaf546nhgb"
-path="res://.godot/imported/Phone.glb-a1c719591491ac54af143e48da65d7b0.scn"
+uid="uid://dcpt42xexh4dq"
+path="res://.godot/imported/keyboard.glb-9ecd4714dfc604d96fb1456062c10603.scn"
 
 [deps]
 
-source_file="res://Assets/Mesh/Level/Phone.glb"
-dest_files=["res://.godot/imported/Phone.glb-a1c719591491ac54af143e48da65d7b0.scn"]
+source_file="res://Assets/Mesh/Level/Props/keyboard.glb"
+dest_files=["res://.godot/imported/keyboard.glb-9ecd4714dfc604d96fb1456062c10603.scn"]
 
 [params]
 
@@ -26,11 +26,4 @@ skins/use_named_skins=true
 animation/import=true
 animation/fps=30
 import_script/path=""
-_subresources={
-"materials": {
-"TextureAtlas": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/material/GlobalMaterial.tres"
-}
-}
-}
+_subresources={}

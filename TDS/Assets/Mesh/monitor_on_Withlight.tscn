@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bss7wnegr8swv"]
+
+[ext_resource type="PackedScene" uid="uid://cgjtphls77y0b" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="1_6alfc"]
+
+[node name="monitorON" instance=ExtResource("1_6alfc")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0.417216, 0.0264465)
+light_color = Color(1, 0.282353, 0, 1)
+spot_range = 1.4372
+spot_angle = 61.4162

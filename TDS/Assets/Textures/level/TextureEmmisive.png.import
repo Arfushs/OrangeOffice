@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt5lbpr2qcfn4"
-path.s3tc="res://.godot/imported/SurfaceImperfections003_1K_var2.jpg-39a2312a2e1262885bfaa2867a865f23.s3tc.ctex"
-path.etc2="res://.godot/imported/SurfaceImperfections003_1K_var2.jpg-39a2312a2e1262885bfaa2867a865f23.etc2.ctex"
+uid="uid://bpnommjsl7re6"
+path.s3tc="res://.godot/imported/TextureEmmisive.png-c8227f487e6729d1d11698a38c00f818.s3tc.ctex"
+path.etc2="res://.godot/imported/TextureEmmisive.png-c8227f487e6729d1d11698a38c00f818.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/level/SurfaceImperfections003_1K_var2.jpg"
-dest_files=["res://.godot/imported/SurfaceImperfections003_1K_var2.jpg-39a2312a2e1262885bfaa2867a865f23.s3tc.ctex", "res://.godot/imported/SurfaceImperfections003_1K_var2.jpg-39a2312a2e1262885bfaa2867a865f23.etc2.ctex"]
+source_file="res://Assets/Textures/level/TextureEmmisive.png"
+dest_files=["res://.godot/imported/TextureEmmisive.png-c8227f487e6729d1d11698a38c00f818.s3tc.ctex", "res://.godot/imported/TextureEmmisive.png-c8227f487e6729d1d11698a38c00f818.etc2.ctex"]
 
 [params]
 

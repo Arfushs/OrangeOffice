@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://befqn60ivjb5i"]
+
+[ext_resource type="PackedScene" uid="uid://csxr2q2ylai6k" path="res://Assets/Mesh/Level/Props/Clock.glb" id="1_xyxh5"]
+[ext_resource type="PackedScene" uid="uid://bxkm3an8qwuja" path="res://Assets/Mesh/Level/WindowWall.glb" id="2_tp1ix"]
+[ext_resource type="PackedScene" uid="uid://mroxxw4tymsa" path="res://Assets/Mesh/Level/Pillar.glb" id="3_y6rng"]
+[ext_resource type="PackedScene" uid="uid://cgjtphls77y0b" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="4_p5rpy"]
+
+[node name="Level Asserts Testing Scene" type="Node3D"]
+
+[node name="Clock" parent="." instance=ExtResource("1_xyxh5")]
+
+[node name="WindowWall" parent="." instance=ExtResource("2_tp1ix")]
+
+[node name="Pillar" parent="." instance=ExtResource("3_y6rng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="monitorON" parent="." instance=ExtResource("4_p5rpy")]
