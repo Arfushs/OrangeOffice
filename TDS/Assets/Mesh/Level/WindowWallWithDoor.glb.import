@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dii0x5a8t3mm3"
+uid="uid://ignllgo2qntj"
 path="res://.godot/imported/WindowWallWithDoor.glb-17c654bc25d5d9ef73f1ceb917f3b675.scn"
 
 [deps]
@@ -28,6 +28,10 @@ animation/fps=30
 import_script/path=""
 _subresources={
 "materials": {
+"GlassMat1": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/material/glassmat1.tres"
+},
 "TextureAtlas": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/material/GlobalMaterial.tres"

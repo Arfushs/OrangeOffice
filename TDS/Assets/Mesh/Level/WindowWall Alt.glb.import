@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cn7ls17nw6i1k"
+uid="uid://c5gss7cehd24r"
 path="res://.godot/imported/WindowWall Alt.glb-6981da3b91946ea605a9cf0a2d8defcf.scn"
 
 [deps]
@@ -28,6 +28,10 @@ animation/fps=30
 import_script/path=""
 _subresources={
 "materials": {
+"GlassMat1": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/material/glassmat1.tres"
+},
 "TextureAtlas": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/material/GlobalMaterial.tres"
