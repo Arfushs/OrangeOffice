@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://crd5pt27vpl1c"]
+[gd_scene load_steps=22 format=3 uid="uid://crd5pt27vpl1c"]
 
 [ext_resource type="PackedScene" uid="uid://dx6i8xyntpm41" path="res://Assets/Mesh/Level/CornerWall.glb" id="1_fukqu"]
 [ext_resource type="PackedScene" uid="uid://cdf8ig3somf3p" path="res://Assets/Mesh/Level/Wall.glb" id="2_g5ftn"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bxkm3an8qwuja" path="res://Assets/Mesh/Level/WindowWall.glb" id="3_cfjlb"]
 [ext_resource type="PackedScene" uid="uid://cvhui5t2ykrnh" path="res://Assets/Mesh/Mannequin.glb" id="5_4asq8"]
 [ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/material/GroundMat.tres" id="5_7ndd2"]
-[ext_resource type="Material" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
+[ext_resource type="Material" uid="uid://dik73ac6jhdbf" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
 [ext_resource type="PackedScene" uid="uid://drm3h7lt3apf1" path="res://Assets/Mesh/Level/Props/Curtain1.glb" id="6_qjw2y"]
 [ext_resource type="PackedScene" uid="uid://nv6vp4epdb52" path="res://Assets/Mesh/Level/Props/Curtain3.glb" id="7_f3gxt"]
 [ext_resource type="PackedScene" uid="uid://cgjtphls77y0b" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="8_nivx3"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://21iabl1jkm6k" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
 [ext_resource type="PackedScene" uid="uid://rqyj0ncsgso0" path="res://Assets/Mesh/Level/Props/filecabinet.glb" id="13_5fakx"]
 [ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="14_v3rrc"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="17_0xcml"]
+[ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="17_leanw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eux6j"]
 
@@ -29,6 +31,8 @@ fog_enabled = true
 fog_light_color = Color(0.14902, 0.207843, 0.372549, 1)
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0582
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3dmnn"]
 
 [node name="Mainmenu background" type="Node3D"]
 
@@ -131,7 +135,7 @@ transform = Transform3D(0.807372, 0, -0.590042, 0, 1, 0, 0.590042, 0, 0.807372, 
 transform = Transform3D(0.134453, 0, -0.99092, 0, 1, 0, 0.99092, 0, 0.134453, 0.220466, 1.19209e-07, 0.512222)
 
 [node name="mug" parent="monitorON" instance=ExtResource("11_vd0lq")]
-transform = Transform3D(-0.161897, 0, -0.986808, 0, 1, 0, 0.986808, 0, -0.161897, -0.245197, -0.104136, 0.249809)
+transform = Transform3D(-0.161897, 0, -0.986808, 0, 1, 0, 0.986808, 0, -0.161897, -0.336087, -0.0848427, 0.761345)
 
 [node name="SingleCubicle" parent="monitorON" instance=ExtResource("12_sdig6")]
 transform = Transform3D(0.873857, 0, -0.486183, 0, 1, 0, 0.486183, 0, 0.873857, -0.0855021, -0.897885, -0.446214)
@@ -143,4 +147,104 @@ transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, 0.479608
 transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, 0.479608, 0.018011, 4.11592)
 
 [node name="seat" parent="." instance=ExtResource("14_v3rrc")]
-transform = Transform3D(-0.541723, 0, -0.840557, 0, 1, 0, 0.840557, 0, -0.541723, -2.02343, 0.0869008, 3.87042)
+transform = Transform3D(-0.541723, 0, -0.840557, 0, 1, 0, 0.840557, 0, -0.541723, -1.69574, 0.213681, 3.7911)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape3D_3dmnn")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_0xcml")
+
+[node name="StartGame" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 211.0
+offset_right = 379.0
+offset_bottom = 269.0
+mouse_filter = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
+
+[node name="white" type="ColorRect" parent="Control/StartGame"]
+layout_mode = 1
+offset_right = 237.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="white2" type="ColorRect" parent="Control/StartGame"]
+layout_mode = 1
+offset_top = 56.0
+offset_right = 237.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="Label" type="Label" parent="Control/StartGame"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 7.0
+offset_right = 198.0
+offset_bottom = 58.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("17_leanw")
+theme_override_font_sizes/font_size = 40
+text = "START GAME"
+
+[node name="Button" type="Button" parent="Control/StartGame"]
+layout_mode = 0
+offset_right = 236.0
+offset_bottom = 58.0
+flat = true
+
+[node name="Quit" type="ColorRect" parent="Control"]
+layout_mode = 1
+offset_left = 142.0
+offset_top = 320.0
+offset_right = 379.0
+offset_bottom = 378.0
+mouse_filter = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
+
+[node name="white" type="ColorRect" parent="Control/Quit"]
+layout_mode = 1
+offset_right = 237.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="white2" type="ColorRect" parent="Control/Quit"]
+layout_mode = 1
+offset_top = 56.0
+offset_right = 237.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="Label" type="Label" parent="Control/Quit"]
+layout_mode = 1
+offset_left = 48.0
+offset_top = 7.0
+offset_right = 198.0
+offset_bottom = 58.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("17_leanw")
+theme_override_font_sizes/font_size = 40
+text = "QUIT GAME"
+
+[node name="Button2" type="Button" parent="Control/Quit"]
+layout_mode = 1
+offset_left = 1.0
+offset_right = 237.0
+offset_bottom = 58.0
+flat = true
+
+[connection signal="pressed" from="Control/StartGame/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Quit/Button2" to="Control" method="_on_button_2_pressed"]

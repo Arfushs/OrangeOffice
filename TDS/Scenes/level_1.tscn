@@ -842,6 +842,5 @@ surface_material_override/0 = ExtResource("1_ia6s6")
 shape = SubResource("WorldBoundaryShape3D_kh38s")
 
 [node name="Dummies" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Dummy" parent="Dummies" instance=ExtResource("19_r6vja")]
