@@ -90,7 +90,6 @@ color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Bullet"]
 modulate = Color(0.509804, 0.509804, 0.509804, 1)
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -107,7 +106,6 @@ texture = ExtResource("4_43ms7")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Bullet"]
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -132,10 +130,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54718, -9.53674e-07, -0.988
 [node name="Dummy2" parent="." instance=ExtResource("5_o1v1y")]
 transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 8.95998, 0, 2.27992)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="GameUI" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="Pause" type="Control" parent="CanvasLayer"]
+[node name="Pause" type="Control" parent="GameUI"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
@@ -143,14 +141,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("7_7nnbx")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause"]
-layout_mode = 0
+[node name="ColorRect" type="ColorRect" parent="GameUI/Pause"]
 offset_right = 1152.0
 offset_bottom = 647.0
 color = Color(0, 0, 0, 0.470588)
 
-[node name="Paused" type="ColorRect" parent="CanvasLayer/Pause"]
-layout_mode = 0
+[node name="Paused" type="ColorRect" parent="GameUI/Pause"]
 offset_left = 480.0
 offset_top = 104.0
 offset_right = 800.0
@@ -158,21 +154,18 @@ offset_bottom = 176.0
 scale = Vector2(0.68, 0.68)
 color = Color(0, 0, 0, 0.380392)
 
-[node name="UpWhite" type="ColorRect" parent="CanvasLayer/Pause/Paused"]
-layout_mode = 1
+[node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Paused"]
 offset_right = 320.0
 offset_bottom = 1.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
-[node name="UpWhite2" type="ColorRect" parent="CanvasLayer/Pause/Paused"]
-layout_mode = 1
+[node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Paused"]
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/Pause/Paused"]
-layout_mode = 0
+[node name="Label" type="Label" parent="GameUI/Pause/Paused"]
 offset_left = 69.1176
 offset_top = 9.0
 offset_right = 255.118
@@ -182,8 +175,7 @@ theme_override_fonts/font = ExtResource("5_e6anb")
 theme_override_font_sizes/font_size = 45
 text = "GAME PAUSED"
 
-[node name="Quit" type="ColorRect" parent="CanvasLayer/Pause"]
-layout_mode = 1
+[node name="Quit" type="ColorRect" parent="GameUI/Pause"]
 offset_left = 480.0
 offset_top = 210.0
 offset_right = 800.0
@@ -192,23 +184,20 @@ scale = Vector2(0.68, 0.68)
 mouse_filter = 2
 color = Color(0, 0, 0, 0.380392)
 
-[node name="UpWhite" type="ColorRect" parent="CanvasLayer/Pause/Quit"]
-layout_mode = 1
+[node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Quit"]
 offset_right = 320.0
 offset_bottom = 1.0
 mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
-[node name="UpWhite2" type="ColorRect" parent="CanvasLayer/Pause/Quit"]
-layout_mode = 1
+[node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Quit"]
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
 mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/Pause/Quit"]
-layout_mode = 1
+[node name="Label" type="Label" parent="GameUI/Pause/Quit"]
 offset_left = 126.47
 offset_top = 9.0
 offset_right = 312.47
@@ -218,12 +207,11 @@ theme_override_fonts/font = ExtResource("5_e6anb")
 theme_override_font_sizes/font_size = 45
 text = "QUIT"
 
-[node name="Button" type="Button" parent="CanvasLayer/Pause/Quit"]
-layout_mode = 0
+[node name="Button" type="Button" parent="GameUI/Pause/Quit"]
 offset_right = 324.0
 offset_bottom = 72.0
 action_mode = 0
 flat = true
 
 [connection signal="ammo_spent" from="CharacterBody3D" to="." method="_on_character_body_3d_ammo_spent"]
-[connection signal="pressed" from="CanvasLayer/Pause/Quit/Button" to="CanvasLayer/Pause" method="_on_button_pressed"]
+[connection signal="pressed" from="GameUI/Pause/Quit/Button" to="GameUI/Pause" method="_on_button_pressed"]
