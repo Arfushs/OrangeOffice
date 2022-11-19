@@ -15,14 +15,21 @@ func _ready():
 
 
 func _process(delta): #Time
-	time +=delta
+	
+	var enemy_number = get_tree().get_nodes_in_group("Enemy").size()
+	$PlayerUI/CanvasLayer/Dummy/Label.text = str(enemy_number)
+	
+	if enemy_number !=0:
+		time +=delta
+	else: # Düşmanlar ölünce timerı durdur ve rengi değiştir
+		$PlayerUI/CanvasLayer/Time/time_label.set("theme_override_colors/font_color", Color(1, 0.28, 0,1))
 	var secs = fmod(time,60)
 	var min = fmod(time,60*60) / 60
 	var time_passed = "%02d : %02d" % [min,secs]
 	$PlayerUI/CanvasLayer/Time/time_label.text = time_passed
 	
-	var enemy_number = get_tree().get_nodes_in_group("Enemy").size()
-	$PlayerUI/CanvasLayer/Dummy/Label.text = str(enemy_number)
+	
+	
 
 func _physics_process(delta):
 	
