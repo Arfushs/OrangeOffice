@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dg08w0aulm51v"]
+
+[ext_resource type="Texture2D" uid="uid://ckwtpi2mf52ob" path="res://Assets/Textures/level/texture.png" id="1_4orx8"]
+[ext_resource type="Texture2D" uid="uid://dy14jefw3gaot" path="res://Assets/Textures/level/texture Roughness.png" id="2_2w5k7"]
+
+[resource]
+albedo_texture = ExtResource("1_4orx8")
+roughness_texture = ExtResource("2_2w5k7")

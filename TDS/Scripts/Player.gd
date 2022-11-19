@@ -72,7 +72,8 @@ func reload():
 func animHandle(delta):
 	# Movement Anim
 	var tempVector1 = rotator.global_transform.basis * Vector3(input_dir.x,0,input_dir.y)
-	var animVector:= Vector2(tempVector1.x,tempVector1.z)
+	var animVector:= Vector2(tempVector1.x,tempVector1.z).normalized()
+	print(animVector)
 	anim.set("parameters/Movement_vector/blend_position", animVector)
 	
 	#Rotation Anim

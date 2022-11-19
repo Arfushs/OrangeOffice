@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
-[ext_resource type="Material" uid="uid://dik73ac6jhdbf" path="res://Assets/material/new_standard_material_3d.tres" id="2_jqebi"]
+[ext_resource type="Material" path="res://Assets/material/new_standard_material_3d.tres" id="2_jqebi"]
 [ext_resource type="Texture2D" uid="uid://bn7bqn3knlvq7" path="res://1261824.png" id="4_43ms7"]
 [ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="5_e6anb"]
 [ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
@@ -73,14 +73,22 @@ offset_bottom = 647.0
 [node name="CanvasLayer" type="CanvasLayer" parent="PlayerUI"]
 
 [node name="ColorRect" type="ColorRect" parent="PlayerUI/CanvasLayer"]
-offset_left = 958.0
-offset_top = 529.0
-offset_right = 1140.0
-offset_bottom = 619.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -120.0
+offset_right = -25.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
 color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/ColorRect"]
 modulate = Color(0.509804, 0.509804, 0.509804, 1)
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -97,6 +105,7 @@ texture = ExtResource("4_43ms7")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/ColorRect"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -116,7 +125,7 @@ theme_override_font_sizes/font_size = 45
 text = "10/10"
 
 [node name="Dummy" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.95998, 0, -11.482)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54718, -9.53674e-07, -0.988105)
 
 [node name="Dummy2" parent="." instance=ExtResource("5_o1v1y")]
 transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 8.95998, 0, 2.27992)
