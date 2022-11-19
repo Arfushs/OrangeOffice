@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://crd5pt27vpl1c"]
+[gd_scene load_steps=28 format=3 uid="uid://crd5pt27vpl1c"]
 
 [ext_resource type="PackedScene" uid="uid://dx6i8xyntpm41" path="res://Assets/Mesh/Level/CornerWall.glb" id="1_fukqu"]
 [ext_resource type="PackedScene" uid="uid://cdf8ig3somf3p" path="res://Assets/Mesh/Level/Wall.glb" id="2_g5ftn"]
@@ -7,18 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://cvhui5t2ykrnh" path="res://Assets/Mesh/Mannequin.glb" id="5_4asq8"]
 [ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/material/GroundMat.tres" id="5_7ndd2"]
 [ext_resource type="PackedScene" uid="uid://dgk20qp4xfsok" path="res://Scenes/window_wall.tscn" id="5_jsvhx"]
-[ext_resource type="Material" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
+[ext_resource type="Material" uid="uid://dik73ac6jhdbf" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
 [ext_resource type="PackedScene" uid="uid://drm3h7lt3apf1" path="res://Assets/Mesh/Level/Props/Curtain1.glb" id="6_qjw2y"]
 [ext_resource type="PackedScene" uid="uid://nv6vp4epdb52" path="res://Assets/Mesh/Level/Props/Curtain3.glb" id="7_f3gxt"]
 [ext_resource type="PackedScene" uid="uid://dfkrpsu28xtqm" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="8_nivx3"]
 [ext_resource type="PackedScene" uid="uid://cj5a1kaocbgnx" path="res://Assets/Mesh/Level/Props/monitorOFF.glb" id="9_0sln8"]
 [ext_resource type="PackedScene" uid="uid://dcpt42xexh4dq" path="res://Assets/Mesh/Level/Props/keyboard.glb" id="10_v1dhi"]
-[ext_resource type="PackedScene" uid="uid://b8wnffqq4f0k4" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
-[ext_resource type="PackedScene" uid="uid://21iabl1jkm6k" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
+[ext_resource type="PackedScene" uid="uid://d3ld0v1v67w8s" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
+[ext_resource type="PackedScene" uid="uid://d3dhw3hv8r86r" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
 [ext_resource type="PackedScene" uid="uid://rqyj0ncsgso0" path="res://Assets/Mesh/Level/Props/filecabinet.glb" id="13_5fakx"]
 [ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="14_v3rrc"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="17_0xcml"]
 [ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="17_leanw"]
+[ext_resource type="AudioStream" uid="uid://cr1l6xcwgpbju" path="res://Elevator Music - Gaming Background Music (HD).wav" id="20_olg7x"]
 [ext_resource type="PackedScene" uid="uid://dxrhlvyyy11sg" path="res://Assets/Mesh/Level/Props/Clock.glb" id="20_rht73"]
 [ext_resource type="PackedScene" uid="uid://dsqckk1aqo5jt" path="res://Assets/Mesh/Level/Props/mouseandpad.glb" id="21_edtkn"]
 
@@ -183,9 +184,9 @@ anchor_top = -1.45
 anchor_right = 6.587
 anchor_bottom = -1.45
 offset_left = -118.48
-offset_top = -29.0
+offset_top = -16.0
 offset_right = 118.52
-offset_bottom = 29.0
+offset_bottom = 42.0
 mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
@@ -225,9 +226,9 @@ anchor_top = 1.275
 anchor_right = 6.587
 anchor_bottom = 1.275
 offset_left = -118.48
-offset_top = -29.0
+offset_top = 67.0
 offset_right = 118.52
-offset_bottom = 29.0
+offset_bottom = 125.0
 mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
@@ -260,6 +261,132 @@ offset_left = 1.0
 offset_right = 237.0
 offset_bottom = 58.0
 flat = true
+
+[node name="CreditsButton" type="ColorRect" parent="Control"]
+anchors_preset = -1
+anchor_left = 6.587
+anchor_top = 1.275
+anchor_right = 6.587
+anchor_bottom = 1.275
+offset_left = -118.48
+offset_top = -28.0
+offset_right = 118.52
+offset_bottom = 30.0
+mouse_filter = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
+
+[node name="white" type="ColorRect" parent="Control/CreditsButton"]
+offset_right = 237.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="white2" type="ColorRect" parent="Control/CreditsButton"]
+offset_top = 56.0
+offset_right = 237.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="Label" type="Label" parent="Control/CreditsButton"]
+offset_left = 48.0
+offset_top = 7.0
+offset_right = 198.0
+offset_bottom = 58.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("17_leanw")
+theme_override_font_sizes/font_size = 40
+text = "CREDITS"
+
+[node name="Credit" type="Button" parent="Control/CreditsButton"]
+offset_right = 239.0
+offset_bottom = 57.0
+flat = true
+
+[node name="Credits" type="ColorRect" parent="Control"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -704.0
+offset_right = 2035.0
+offset_bottom = 715.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Credits"]
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.482
+anchor_right = 0.339
+anchor_bottom = 0.482
+offset_left = -320.228
+offset_top = -230.958
+offset_right = 321.772
+offset_bottom = 231.042
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("17_leanw")
+theme_override_font_sizes/normal_font_size = 50
+text = "CREDIT
+
+
+Development ----> Can berk soydan
+3D art & Models ----> Çağ CAn CAklı
+
+"
+
+[node name="Back" type="ColorRect" parent="Control/Credits"]
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.626
+anchor_right = 0.253
+anchor_bottom = 0.626
+offset_left = -119.356
+offset_top = -28.2941
+offset_right = 117.644
+offset_bottom = 29.7059
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
+
+[node name="white" type="ColorRect" parent="Control/Credits/Back"]
+offset_right = 237.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="white2" type="ColorRect" parent="Control/Credits/Back"]
+offset_top = 56.0
+offset_right = 237.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.929412, 0.929412, 0.929412, 0.976471)
+
+[node name="Label" type="Label" parent="Control/Credits/Back"]
+offset_left = 76.0
+offset_top = 8.0
+offset_right = 226.0
+offset_bottom = 59.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("17_leanw")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="back" type="Button" parent="Control/Credits/Back"]
+offset_right = 236.0
+offset_bottom = 57.0
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("20_olg7x")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49711, 1.09352, 3.12432)
@@ -294,3 +421,5 @@ transform = Transform3D(0.917144, 0, -0.398557, 0, 1, 0, 0.398557, 0, 0.917144, 
 
 [connection signal="pressed" from="Control/StartGame/Button" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Quit/Button2" to="Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/CreditsButton/Credit" to="Control" method="_on_credit_pressed"]
+[connection signal="pressed" from="Control/Credits/Back/back" to="Control" method="_on_back_pressed"]

@@ -14,6 +14,7 @@ var time = 0
 
 func _ready():
 	$AudioStreamPlayer.play()
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	Input.set_custom_mouse_cursor(arrow)
 
 func _process(delta): #Time

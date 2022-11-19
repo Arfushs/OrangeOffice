@@ -61,6 +61,7 @@ color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Bullet"]
 modulate = Color(1, 0.282353, 0, 1)
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -77,6 +78,7 @@ texture = ExtResource("4_43ms7")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Bullet"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -108,6 +110,7 @@ color = Color(0, 0, 0, 0.298039)
 metadata/_edit_use_anchors_ = true
 
 [node name="time_label" type="Label" parent="PlayerUI/CanvasLayer/Time"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.536
@@ -127,6 +130,7 @@ text = "00 : 00"
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Time"]
 modulate = Color(1, 0.282353, 0, 1)
+layout_mode = 0
 offset_left = 101.0
 offset_top = 4.0
 offset_right = 141.0
@@ -138,7 +142,7 @@ ignore_texture_size = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -237.0
+offset_left = -247.0
 offset_top = 22.0
 offset_right = -165.0
 offset_bottom = 74.0
@@ -146,10 +150,11 @@ grow_horizontal = 0
 color = Color(0, 0, 0, 0.298039)
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Dummy"]
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 45.0
-offset_bottom = 53.0
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 43.0
+offset_bottom = 52.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("5_e6anb")
@@ -158,9 +163,10 @@ text = "1"
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Dummy"]
 modulate = Color(1, 0.282353, 0, 1)
-offset_left = 27.0
+layout_mode = 0
+offset_left = 38.0
 offset_top = 5.0
-offset_right = 66.0
+offset_right = 77.0
 offset_bottom = 44.0
 texture = ExtResource("6_dffix")
 ignore_texture_size = true
@@ -186,6 +192,7 @@ grow_vertical = 2
 script = ExtResource("7_7nnbx")
 
 [node name="ColorRect" type="ColorRect" parent="GameUI/Pause"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -198,6 +205,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.470588)
 
 [node name="Paused" type="ColorRect" parent="GameUI/Pause"]
+layout_mode = 0
 offset_left = -71.9999
 offset_top = -197.0
 offset_right = 248.0
@@ -206,17 +214,20 @@ scale = Vector2(0.68, 0.68)
 color = Color(0, 0, 0, 0.380392)
 
 [node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Paused"]
+layout_mode = 0
 offset_right = 320.0
 offset_bottom = 1.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Paused"]
+layout_mode = 0
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="Label" type="Label" parent="GameUI/Pause/Paused"]
+layout_mode = 0
 offset_left = 69.1176
 offset_top = 9.0
 offset_right = 255.118
@@ -227,6 +238,8 @@ theme_override_font_sizes/font_size = 45
 text = "GAME PAUSED"
 
 [node name="Quit" type="ColorRect" parent="GameUI/Pause"]
+process_mode = 3
+layout_mode = 0
 offset_left = -71.9999
 offset_top = -91.0
 offset_right = 248.0
@@ -236,12 +249,14 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.380392)
 
 [node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Quit"]
+layout_mode = 0
 offset_right = 320.0
 offset_bottom = 1.0
 mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Quit"]
+layout_mode = 0
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
@@ -249,6 +264,7 @@ mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="Label" type="Label" parent="GameUI/Pause/Quit"]
+layout_mode = 0
 offset_left = 126.47
 offset_top = 9.0
 offset_right = 312.47
@@ -259,6 +275,7 @@ theme_override_font_sizes/font_size = 45
 text = "QUIT"
 
 [node name="Button" type="Button" parent="GameUI/Pause/Quit"]
+layout_mode = 0
 offset_right = 324.0
 offset_bottom = 72.0
 action_mode = 0
