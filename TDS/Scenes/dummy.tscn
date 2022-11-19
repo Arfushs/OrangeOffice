@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d4ajffb7aylys" path="res://Scenes/mannequin.tscn" id="2_gp3wg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x0fgm"]
-radius = 0.45552
+radius = 0.578895
 height = 1.55084
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wl8u3"]
@@ -16,7 +16,6 @@ script = ExtResource("1_gflw2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.26274, 0, 0, 0, 1, 0, 0.983382, 0)
-visible = false
 shape = SubResource("CapsuleShape3D_x0fgm")
 
 [node name="Hitbox" type="Area3D" parent="."]
