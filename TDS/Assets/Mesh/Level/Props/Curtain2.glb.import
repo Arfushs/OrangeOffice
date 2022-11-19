@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drm3h7lt3apf1"
-path="res://.godot/imported/Curtain1.glb-94f5ddfcdfbf7c2355a619118db7f177.scn"
+uid="uid://2s40ga8foo40"
+path="res://.godot/imported/Curtain2.glb-64c5e44dd10a91cd9bb2bcf57ec84cfd.scn"
 
 [deps]
 
-source_file="res://Assets/Mesh/Level/Curtain1.glb"
-dest_files=["res://.godot/imported/Curtain1.glb-94f5ddfcdfbf7c2355a619118db7f177.scn"]
+source_file="res://Assets/Mesh/Level/Props/Curtain2.glb"
+dest_files=["res://.godot/imported/Curtain2.glb-64c5e44dd10a91cd9bb2bcf57ec84cfd.scn"]
 
 [params]
 
@@ -34,7 +34,7 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Curtain12": {
+"PATH:Curtain22": {
 "generate/physics": true
 }
 }
