@@ -10,6 +10,10 @@ var ray_target = Vector3()
 
 var time = 0
 
+func _ready():
+	$AudioStreamPlayer.play()
+
+
 func _process(delta): #Time
 	time +=delta
 	var secs = fmod(time,60)

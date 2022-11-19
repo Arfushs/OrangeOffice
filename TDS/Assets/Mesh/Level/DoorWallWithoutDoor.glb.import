@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://csr4n50flafms"
+uid="uid://5jhhtr2gobhu"
 path="res://.godot/imported/DoorWallWithoutDoor.glb-b35bbe1ca3621ccea21adc79adbb6533.scn"
 
 [deps]
@@ -31,6 +31,12 @@ _subresources={
 "TextureAtlas": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/material/GlobalMaterial.tres"
+}
+},
+"nodes": {
+"PATH:DoorWall": {
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }

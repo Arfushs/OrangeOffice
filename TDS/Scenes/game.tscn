@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bcbrh63mibf7q" path="res://2523802-200.png" id="6_dffix"]
 [ext_resource type="Script" path="res://Scripts/Pause.gd" id="7_7nnbx"]
 [ext_resource type="PackedScene" uid="uid://cbwmvuo5wghim" path="res://Scenes/level_1.tscn" id="10_0alh8"]
-[ext_resource type="PackedScene" uid="uid://cwm76rv5ytsgh" path="res://Assets/Mesh/Level/WindowWall Alt.glb" id="11_h45gp"]
+[ext_resource type="AudioStream" uid="uid://8odqy17i7ol5" path="res://Assets/Sound/Stealth-Music-Zeroed.wav" id="11_ikdpi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvo6b"]
 albedo_color = Color(1, 0, 0.0156863, 1)
@@ -21,6 +21,7 @@ albedo_color = Color(1, 0, 0.0156863, 1)
 script = ExtResource("1_u6w4i")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5783, 0, 18.036)
 SPEED = 15.0
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
@@ -180,10 +181,10 @@ texture = ExtResource("6_dffix")
 ignore_texture_size = true
 
 [node name="Dummy" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54718, -9.53674e-07, -0.988105)
+transform = Transform3D(0.837452, 0, 0.546511, 0, 1, 0, -0.546511, 0, 0.837452, -13.7907, 0, 1.65537)
 
 [node name="Dummy2" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 8.95998, 0, 2.27992)
+transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 4.15275, 0, -1.30051)
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 layer = 2
@@ -295,10 +296,10 @@ action_mode = 0
 flat = true
 
 [node name="Level1" parent="." instance=ExtResource("10_0alh8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="WindowWall Alt" parent="." instance=ExtResource("11_h45gp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0031, 0, -5.06047)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ikdpi")
 
 [connection signal="ammo_spent" from="CharacterBody3D" to="." method="_on_character_body_3d_ammo_spent"]
 [connection signal="pressed" from="GameUI/Pause/Quit/Button" to="GameUI/Pause" method="_on_button_pressed"]
