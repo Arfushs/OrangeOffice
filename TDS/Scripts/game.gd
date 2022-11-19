@@ -15,7 +15,10 @@ func _process(delta): #Time
 	var secs = fmod(time,60)
 	var min = fmod(time,60*60) / 60
 	var time_passed = "%02d : %02d" % [min,secs]
-	$PlayerUI/CanvasLayer/ColorRect/time_label.text = time_passed
+	$PlayerUI/CanvasLayer/Time/time_label.text = time_passed
+	
+	var enemy_number = get_tree().get_nodes_in_group("Enemy").size()
+	$PlayerUI/CanvasLayer/Dummy/Label.text = str(enemy_number)
 
 func _physics_process(delta):
 	

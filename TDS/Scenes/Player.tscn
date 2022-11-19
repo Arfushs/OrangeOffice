@@ -49,7 +49,7 @@ bones/61/rotation = Quaternion(-0.170723, -0.0720639, 0.0179902, 0.982516)
 bones/62/rotation = Quaternion(0.55228, 0.192229, 0.0347467, 0.810449)
 
 [node name="Armature@GeneralSkeleton@BoneAttachment3D" parent="Rotation/main_character/Armature/Skeleton3D" index="1"]
-transform = Transform3D(-0.0173632, -0.201843, 0.979264, 0.0539643, 0.977795, 0.202497, -0.998392, 0.0563612, -0.0060856, -0.0656611, 0.424805, -1.44835)
+transform = Transform3D(-0.0173636, -0.201844, 0.979263, 0.0539637, 0.977795, 0.202499, -0.998392, 0.0563606, -0.00608605, -0.0656613, 0.424805, -1.44835)
 
 [node name="GunBarrel" parent="Rotation/main_character" index="2"]
 transform = Transform3D(0.0358192, 0.20269, -0.978419, 0.997705, -0.0599734, 0.0241039, -0.0538003, -0.977236, -0.204415, -0.07536, 1.51761, 0.696791)
