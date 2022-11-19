@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dfkrpsu28xtqm" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="8_nivx3"]
 [ext_resource type="PackedScene" uid="uid://cj5a1kaocbgnx" path="res://Assets/Mesh/Level/Props/monitorOFF.glb" id="9_0sln8"]
 [ext_resource type="PackedScene" uid="uid://dcpt42xexh4dq" path="res://Assets/Mesh/Level/Props/keyboard.glb" id="10_v1dhi"]
-[ext_resource type="PackedScene" uid="uid://cs2w6jccn208a" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
+[ext_resource type="PackedScene" uid="uid://b8wnffqq4f0k4" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
 [ext_resource type="PackedScene" uid="uid://21iabl1jkm6k" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
 [ext_resource type="PackedScene" uid="uid://rqyj0ncsgso0" path="res://Assets/Mesh/Level/Props/filecabinet.glb" id="13_5fakx"]
 [ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="14_v3rrc"]
@@ -147,7 +147,7 @@ transform = Transform3D(0.997627, 0, 0.0688511, 0, 1, 0, -0.0688511, 0, 0.997627
 transform = Transform3D(0.881798, 0, -0.471627, 0, 1, 0, 0.471627, 0, 0.881798, 0.487727, 0.897885, 0.760719)
 
 [node name="mug" parent="SingleCubicle" instance=ExtResource("11_vd0lq")]
-transform = Transform3D(0.338295, 0, -0.941041, 0, 1, 0, 0.941041, 0, 0.338295, 0.368119, 0.813042, 1.17706)
+transform = Transform3D(0.338295, 0, -0.941041, 0, 1, 0, 0.941041, 0, 0.338295, 0.368119, 0.88365, 1.17706)
 
 [node name="filecabinet" parent="." instance=ExtResource("13_5fakx")]
 transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, 0.479608, 0.018011, 4.70555)
@@ -156,7 +156,7 @@ transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, 0.479608
 transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, 0.479608, 0.018011, 4.11592)
 
 [node name="seat" parent="." instance=ExtResource("14_v3rrc")]
-transform = Transform3D(-0.305712, 0, -0.952124, 0, 1, 0, 0.952124, 0, -0.305712, -1.26538, 0.0900481, 3.45595)
+transform = Transform3D(0.328372, 0, -0.944548, 0, 1, 0, 0.944548, 0, 0.328372, -1.26538, 0.0900481, 3.45595)
 
 [node name="Ground" type="StaticBody3D" parent="."]
 
@@ -177,7 +177,6 @@ grow_vertical = 2
 script = ExtResource("17_0xcml")
 
 [node name="StartGame" type="ColorRect" parent="Control"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 6.587
 anchor_top = -1.45
@@ -191,14 +190,12 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/StartGame"]
-layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/StartGame"]
-layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -206,7 +203,6 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/StartGame"]
-layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -218,13 +214,11 @@ theme_override_font_sizes/font_size = 40
 text = "START GAME"
 
 [node name="Button" type="Button" parent="Control/StartGame"]
-layout_mode = 0
 offset_right = 236.0
 offset_bottom = 58.0
 flat = true
 
 [node name="Quit" type="ColorRect" parent="Control"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 6.587
 anchor_top = 1.275
@@ -238,14 +232,12 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/Quit"]
-layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/Quit"]
-layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -253,7 +245,6 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/Quit"]
-layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -265,7 +256,6 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT GAME"
 
 [node name="Button2" type="Button" parent="Control/Quit"]
-layout_mode = 0
 offset_left = 1.0
 offset_right = 237.0
 offset_bottom = 58.0

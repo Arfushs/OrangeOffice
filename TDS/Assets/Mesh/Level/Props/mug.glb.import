@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cs2w6jccn208a"
+uid="uid://b8wnffqq4f0k4"
 path="res://.godot/imported/mug.glb-10f157a3f353b397c4c99ef766e1e259.scn"
 
 [deps]
@@ -35,7 +35,7 @@ _subresources={
 },
 "nodes": {
 "PATH:Mug": {
-"physics/body_type": 1,
+"generate/physics": true,
 "physics/shape_type": 5,
 "primitive/height": 0.18,
 "primitive/position": Vector3(0.036, 0.086, 0),

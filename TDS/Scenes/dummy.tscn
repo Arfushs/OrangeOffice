@@ -27,4 +27,11 @@ shape = SubResource("CapsuleShape3D_wl8u3")
 [node name="Mannequin" parent="." instance=ExtResource("2_gp3wg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156721, 0)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.784505, 0)
+light_color = Color(1, 0.388235, 0, 1)
+light_energy = 2.446
+spot_range = 1.61335
+spot_angle = 57.4985
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
