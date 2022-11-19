@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=17 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bn7bqn3knlvq7" path="res://1261824.png" id="4_43ms7"]
 [ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="5_e6anb"]
 [ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
+[ext_resource type="Texture2D" uid="uid://cd8w335m6vab1" path="res://55170.png" id="6_1x7rl"]
+[ext_resource type="Texture2D" uid="uid://bcbrh63mibf7q" path="res://2523802-200.png" id="6_dffix"]
 [ext_resource type="Script" path="res://Scripts/Pause.gd" id="7_7nnbx"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fuqt"]
@@ -89,7 +91,7 @@ scale = Vector2(0.8, 0.8)
 color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Bullet"]
-modulate = Color(0.509804, 0.509804, 0.509804, 1)
+modulate = Color(1, 0.282353, 0, 1)
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -124,6 +126,76 @@ theme_override_fonts/font = ExtResource("5_e6anb")
 theme_override_font_sizes/font_size = 45
 text = "10/10"
 
+[node name="Time" type="ColorRect" parent="PlayerUI/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -165.0
+offset_top = 22.0
+offset_right = -24.0
+offset_bottom = 74.0
+grow_horizontal = 0
+color = Color(0, 0, 0, 0.298039)
+metadata/_edit_use_anchors_ = true
+
+[node name="time_label" type="Label" parent="PlayerUI/CanvasLayer/Time"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.536
+anchor_right = 0.5
+anchor_bottom = 0.536
+offset_left = -64.5
+offset_top = -25.48
+offset_right = 36.5
+offset_bottom = 25.52
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_e6anb")
+theme_override_font_sizes/font_size = 40
+text = "00 : 00"
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Time"]
+modulate = Color(1, 0.282353, 0, 1)
+offset_left = 101.0
+offset_top = 4.0
+offset_right = 141.0
+offset_bottom = 44.0
+texture = ExtResource("6_1x7rl")
+ignore_texture_size = true
+
+[node name="Dummy" type="ColorRect" parent="PlayerUI/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -237.0
+offset_top = 22.0
+offset_right = -165.0
+offset_bottom = 74.0
+grow_horizontal = 0
+color = Color(0, 0, 0, 0.298039)
+
+[node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Dummy"]
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 53.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_e6anb")
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Dummy"]
+modulate = Color(1, 0.282353, 0, 1)
+offset_left = 27.0
+offset_top = 5.0
+offset_right = 66.0
+offset_bottom = 44.0
+texture = ExtResource("6_dffix")
+ignore_texture_size = true
+
 [node name="Dummy" parent="." instance=ExtResource("5_o1v1y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54718, -9.53674e-07, -0.988105)
 
@@ -135,22 +207,38 @@ layer = 2
 
 [node name="Pause" type="Control" parent="GameUI"]
 process_mode = 3
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("7_7nnbx")
 
 [node name="ColorRect" type="ColorRect" parent="GameUI/Pause"]
-offset_right = 1152.0
-offset_bottom = 647.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1225.0
+offset_top = -793.0
+offset_right = 1919.0
+offset_bottom = 1115.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.470588)
 
 [node name="Paused" type="ColorRect" parent="GameUI/Pause"]
-offset_left = 480.0
-offset_top = 104.0
-offset_right = 800.0
-offset_bottom = 176.0
+offset_left = -71.9999
+offset_top = -197.0
+offset_right = 248.0
+offset_bottom = -125.0
 scale = Vector2(0.68, 0.68)
 color = Color(0, 0, 0, 0.380392)
 
@@ -176,10 +264,10 @@ theme_override_font_sizes/font_size = 45
 text = "GAME PAUSED"
 
 [node name="Quit" type="ColorRect" parent="GameUI/Pause"]
-offset_left = 480.0
-offset_top = 210.0
-offset_right = 800.0
-offset_bottom = 282.0
+offset_left = -71.9999
+offset_top = -91.0
+offset_right = 248.0
+offset_bottom = -19.0
 scale = Vector2(0.68, 0.68)
 mouse_filter = 2
 color = Color(0, 0, 0, 0.380392)
