@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbwmvuo5wghim"]
+
+[ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/Textures/kenney_prototypetextures/Dark/test1.tres" id="1_yaiwj"]
+[ext_resource type="PackedScene" uid="uid://csr4n50flafms" path="res://Assets/Mesh/Level/DoorWallWithoutDoor.glb" id="2_pxttw"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4y6d6"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kh38s"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_4y6d6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_yaiwj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_kh38s")
+
+[node name="DoorWallWithoutDoor" parent="." instance=ExtResource("2_pxttw")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -1.36116, 0, 3.77156)
