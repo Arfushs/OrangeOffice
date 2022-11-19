@@ -1,15 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://derdtww4x1bgo"]
+[gd_scene load_steps=12 format=3 uid="uid://derdtww4x1bgo"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_u6w4i"]
 [ext_resource type="PackedScene" uid="uid://inviklenwnip" path="res://Scenes/Player.tscn" id="1_yumse"]
 [ext_resource type="Texture2D" uid="uid://bn7bqn3knlvq7" path="res://1261824.png" id="4_43ms7"]
-[ext_resource type="Environment" uid="uid://d2r8d2x541owj" path="res://finallEnv.tres" id="4_fm3qp"]
 [ext_resource type="FontFile" uid="uid://b52yde1aoy7jt" path="res://BebasNeue-Regular.otf" id="5_e6anb"]
-[ext_resource type="PackedScene" uid="uid://bonwxnwkbik6l" path="res://Scenes/dummy.tscn" id="5_o1v1y"]
 [ext_resource type="Texture2D" uid="uid://cd8w335m6vab1" path="res://55170.png" id="6_1x7rl"]
 [ext_resource type="Texture2D" uid="uid://bcbrh63mibf7q" path="res://2523802-200.png" id="6_dffix"]
 [ext_resource type="Script" path="res://Scripts/Pause.gd" id="7_7nnbx"]
-[ext_resource type="PackedScene" uid="uid://cbwmvuo5wghim" path="res://Scenes/level_1.tscn" id="10_0alh8"]
+[ext_resource type="PackedScene" uid="uid://c8ug2lxvigaxo" path="res://Scenes/level_1.tscn" id="10_0alh8"]
 [ext_resource type="AudioStream" uid="uid://8odqy17i7ol5" path="res://Assets/Sound/Stealth-Music-Zeroed.wav" id="11_ikdpi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvo6b"]
@@ -22,19 +20,12 @@ script = ExtResource("1_u6w4i")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_yumse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5783, 0, 18.036)
-SPEED = 15.0
+SPEED = 8.0
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 7.644, 0.531)
 current = true
 fov = 70.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("4_fm3qp")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 5.12617, 0)
-shadow_enabled = true
 
 [node name="Debug Pointer" type="Node3D" parent="."]
 visible = false
@@ -70,7 +61,6 @@ color = Color(0, 0, 0, 0.298039)
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Bullet"]
 modulate = Color(1, 0.282353, 0, 1)
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -87,7 +77,6 @@ texture = ExtResource("4_43ms7")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Bullet"]
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -119,7 +108,6 @@ color = Color(0, 0, 0, 0.298039)
 metadata/_edit_use_anchors_ = true
 
 [node name="time_label" type="Label" parent="PlayerUI/CanvasLayer/Time"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.536
@@ -139,7 +127,6 @@ text = "00 : 00"
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Time"]
 modulate = Color(1, 0.282353, 0, 1)
-layout_mode = 0
 offset_left = 101.0
 offset_top = 4.0
 offset_right = 141.0
@@ -159,7 +146,6 @@ grow_horizontal = 0
 color = Color(0, 0, 0, 0.298039)
 
 [node name="Label" type="Label" parent="PlayerUI/CanvasLayer/Dummy"]
-layout_mode = 0
 offset_left = 5.0
 offset_top = 2.0
 offset_right = 45.0
@@ -172,19 +158,12 @@ text = "1"
 
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/CanvasLayer/Dummy"]
 modulate = Color(1, 0.282353, 0, 1)
-layout_mode = 0
 offset_left = 27.0
 offset_top = 5.0
 offset_right = 66.0
 offset_bottom = 44.0
 texture = ExtResource("6_dffix")
 ignore_texture_size = true
-
-[node name="Dummy" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(0.837452, 0, 0.546511, 0, 1, 0, -0.546511, 0, 0.837452, -13.7907, 0, 1.65537)
-
-[node name="Dummy2" parent="." instance=ExtResource("5_o1v1y")]
-transform = Transform3D(-0.372436, 0, -0.928058, 0, 1, 0, 0.928058, 0, -0.372436, 4.15275, 0, -1.30051)
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 layer = 2
@@ -207,7 +186,6 @@ grow_vertical = 2
 script = ExtResource("7_7nnbx")
 
 [node name="ColorRect" type="ColorRect" parent="GameUI/Pause"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -220,7 +198,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.470588)
 
 [node name="Paused" type="ColorRect" parent="GameUI/Pause"]
-layout_mode = 0
 offset_left = -71.9999
 offset_top = -197.0
 offset_right = 248.0
@@ -229,20 +206,17 @@ scale = Vector2(0.68, 0.68)
 color = Color(0, 0, 0, 0.380392)
 
 [node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Paused"]
-layout_mode = 0
 offset_right = 320.0
 offset_bottom = 1.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Paused"]
-layout_mode = 0
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="Label" type="Label" parent="GameUI/Pause/Paused"]
-layout_mode = 0
 offset_left = 69.1176
 offset_top = 9.0
 offset_right = 255.118
@@ -253,7 +227,6 @@ theme_override_font_sizes/font_size = 45
 text = "GAME PAUSED"
 
 [node name="Quit" type="ColorRect" parent="GameUI/Pause"]
-layout_mode = 0
 offset_left = -71.9999
 offset_top = -91.0
 offset_right = 248.0
@@ -263,14 +236,12 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.380392)
 
 [node name="UpWhite" type="ColorRect" parent="GameUI/Pause/Quit"]
-layout_mode = 0
 offset_right = 320.0
 offset_bottom = 1.0
 mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="UpWhite2" type="ColorRect" parent="GameUI/Pause/Quit"]
-layout_mode = 0
 offset_top = 71.0
 offset_right = 320.0
 offset_bottom = 72.0
@@ -278,7 +249,6 @@ mouse_filter = 2
 color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="Label" type="Label" parent="GameUI/Pause/Quit"]
-layout_mode = 0
 offset_left = 126.47
 offset_top = 9.0
 offset_right = 312.47
@@ -289,7 +259,6 @@ theme_override_font_sizes/font_size = 45
 text = "QUIT"
 
 [node name="Button" type="Button" parent="GameUI/Pause/Quit"]
-layout_mode = 0
 offset_right = 324.0
 offset_bottom = 72.0
 action_mode = 0

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p0s0omo6a1c8"
+uid="uid://21iabl1jkm6k"
 path="res://.godot/imported/SingleCubicle.glb-793daad2a4f87e2c8d0ac878ef134ea4.scn"
 
 [deps]
@@ -30,7 +30,7 @@ _subresources={
 "materials": {
 "TextureAtlas": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/material/GlobalMaterial.tres"
+"use_external/path": "res://Assets/material/GlobalMaterialTwosided.tres"
 },
 "TextureAtlasMetalic": {
 "use_external/enabled": true,

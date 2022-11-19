@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1m16lmtuplic"
-path.s3tc="res://.godot/imported/texture_09.png-56df0d57ff123c04679bac9e4d78ff7b.s3tc.ctex"
-path.etc2="res://.godot/imported/texture_09.png-56df0d57ff123c04679bac9e4d78ff7b.etc2.ctex"
+uid="uid://db1rny82xjk60"
+path.s3tc="res://.godot/imported/Fabric039_1K_Color.jpg-26ad51596ae4f051d8a18c9070ce08ad.s3tc.ctex"
+path.etc2="res://.godot/imported/Fabric039_1K_Color.jpg-26ad51596ae4f051d8a18c9070ce08ad.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/kenney_prototypetextures/Dark/texture_09.png"
-dest_files=["res://.godot/imported/texture_09.png-56df0d57ff123c04679bac9e4d78ff7b.s3tc.ctex", "res://.godot/imported/texture_09.png-56df0d57ff123c04679bac9e4d78ff7b.etc2.ctex"]
+source_file="res://Assets/Textures/level/Fabric039_1K_Color.jpg"
+dest_files=["res://.godot/imported/Fabric039_1K_Color.jpg-26ad51596ae4f051d8a18c9070ce08ad.s3tc.ctex", "res://.godot/imported/Fabric039_1K_Color.jpg-26ad51596ae4f051d8a18c9070ce08ad.etc2.ctex"]
 
 [params]
 
