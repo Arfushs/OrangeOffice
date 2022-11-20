@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://cvhui5t2ykrnh" path="res://Assets/Mesh/Mannequin.glb" id="5_4asq8"]
 [ext_resource type="Material" uid="uid://cno4oq4m2gprd" path="res://Assets/material/GroundMat.tres" id="5_7ndd2"]
 [ext_resource type="PackedScene" uid="uid://dgk20qp4xfsok" path="res://Scenes/window_wall.tscn" id="5_jsvhx"]
-[ext_resource type="Material" uid="uid://dik73ac6jhdbf" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
+[ext_resource type="Material" path="res://Assets/material/new_standard_material_3d.tres" id="6_iom0w"]
 [ext_resource type="PackedScene" uid="uid://drm3h7lt3apf1" path="res://Assets/Mesh/Level/Props/Curtain1.glb" id="6_qjw2y"]
 [ext_resource type="PackedScene" uid="uid://nv6vp4epdb52" path="res://Assets/Mesh/Level/Props/Curtain3.glb" id="7_f3gxt"]
 [ext_resource type="PackedScene" uid="uid://dfkrpsu28xtqm" path="res://Assets/Mesh/Level/Props/monitorON.glb" id="8_nivx3"]
 [ext_resource type="PackedScene" uid="uid://cj5a1kaocbgnx" path="res://Assets/Mesh/Level/Props/monitorOFF.glb" id="9_0sln8"]
 [ext_resource type="PackedScene" uid="uid://dcpt42xexh4dq" path="res://Assets/Mesh/Level/Props/keyboard.glb" id="10_v1dhi"]
-[ext_resource type="PackedScene" uid="uid://d3ld0v1v67w8s" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
-[ext_resource type="PackedScene" uid="uid://d3dhw3hv8r86r" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
+[ext_resource type="PackedScene" uid="uid://b8wnffqq4f0k4" path="res://Assets/Mesh/Level/Props/mug.glb" id="11_vd0lq"]
+[ext_resource type="PackedScene" uid="uid://21iabl1jkm6k" path="res://Assets/Mesh/Level/Props/SingleCubicle.glb" id="12_sdig6"]
 [ext_resource type="PackedScene" uid="uid://rqyj0ncsgso0" path="res://Assets/Mesh/Level/Props/filecabinet.glb" id="13_5fakx"]
 [ext_resource type="PackedScene" uid="uid://bu5hftie08npx" path="res://Assets/Mesh/Level/Props/seat.glb" id="14_v3rrc"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="17_0xcml"]
@@ -178,6 +178,7 @@ grow_vertical = 2
 script = ExtResource("17_0xcml")
 
 [node name="StartGame" type="ColorRect" parent="Control"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 6.587
 anchor_top = -1.45
@@ -191,12 +192,14 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/StartGame"]
+layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/StartGame"]
+layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -204,6 +207,7 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/StartGame"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -215,11 +219,13 @@ theme_override_font_sizes/font_size = 40
 text = "START GAME"
 
 [node name="Button" type="Button" parent="Control/StartGame"]
+layout_mode = 0
 offset_right = 236.0
 offset_bottom = 58.0
 flat = true
 
 [node name="Quit" type="ColorRect" parent="Control"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 6.587
 anchor_top = 1.275
@@ -233,12 +239,14 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/Quit"]
+layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/Quit"]
+layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -246,6 +254,7 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/Quit"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -257,12 +266,14 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT GAME"
 
 [node name="Button2" type="Button" parent="Control/Quit"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 237.0
 offset_bottom = 58.0
 flat = true
 
 [node name="CreditsButton" type="ColorRect" parent="Control"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 6.587
 anchor_top = 1.275
@@ -276,12 +287,14 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/CreditsButton"]
+layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/CreditsButton"]
+layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -289,6 +302,7 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/CreditsButton"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 7.0
 offset_right = 198.0
@@ -300,12 +314,14 @@ theme_override_font_sizes/font_size = 40
 text = "CREDITS"
 
 [node name="Credit" type="Button" parent="Control/CreditsButton"]
+layout_mode = 0
 offset_right = 239.0
 offset_bottom = 57.0
 flat = true
 
 [node name="Credits" type="ColorRect" parent="Control"]
 visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -320,6 +336,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Credits"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.339
 anchor_top = 0.482
@@ -335,13 +352,32 @@ theme_override_fonts/normal_font = ExtResource("17_leanw")
 theme_override_font_sizes/normal_font_size = 50
 text = "CREDIT
 
-
 Development ----> Can berk soydan
-3D art & Models ----> Çağ CAn CAklı
+Visuals----> Mage
 
 "
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/Credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.482
+anchor_right = 0.339
+anchor_bottom = 0.482
+offset_left = -320.228
+offset_top = 68.042
+offset_right = 321.772
+offset_bottom = 350.042
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("17_leanw")
+theme_override_font_sizes/normal_font_size = 20
+text = "This was a trial project that was done in a week.  So it might have bugs or other related issues.
+
+Thanks for playing."
+
 [node name="Back" type="ColorRect" parent="Control/Credits"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.253
 anchor_top = 0.626
@@ -357,12 +393,14 @@ mouse_filter = 2
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.52549)
 
 [node name="white" type="ColorRect" parent="Control/Credits/Back"]
+layout_mode = 0
 offset_right = 237.0
 offset_bottom = 2.0
 mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="white2" type="ColorRect" parent="Control/Credits/Back"]
+layout_mode = 0
 offset_top = 56.0
 offset_right = 237.0
 offset_bottom = 58.0
@@ -370,6 +408,7 @@ mouse_filter = 2
 color = Color(0.929412, 0.929412, 0.929412, 0.976471)
 
 [node name="Label" type="Label" parent="Control/Credits/Back"]
+layout_mode = 0
 offset_left = 76.0
 offset_top = 8.0
 offset_right = 226.0
@@ -381,6 +420,7 @@ theme_override_font_sizes/font_size = 40
 text = "BACK"
 
 [node name="back" type="Button" parent="Control/Credits/Back"]
+layout_mode = 0
 offset_right = 236.0
 offset_bottom = 57.0
 flat = true
